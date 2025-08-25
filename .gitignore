@@ -1,0 +1,77 @@
+# Environment files
+.env
+.env.local
+.env.production
+
+# Database configuration
+libs/Database.php
+config/database.php
+
+# SQL dumps and backups
+# *.sql
+# *.dump
+# IOC.sql
+# ioc.sql
+
+# Dependencies
+/bower_components/
+/node_modules/
+/vendor/
+
+# IDE and editor files
+/nbproject/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Log files
+*.log
+logs/
+error_log
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Cache directories
+cache/
+.cache/
+
+# PHP specific
+composer.phar
+*.phar
+
+# Build files
+/Gruntfile.js
+/gulpfile.js
+/webpack.config.js
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Session files
+session/
+sessions/
+
+# Upload directories
+uploads/
+upload/
+
+# Configuration files that contain sensitive data
+config/config.local.php
+config/secrets.php

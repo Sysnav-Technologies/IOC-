@@ -1,0 +1,2881 @@
+{
+    "car_transactions": [
+        {
+            "id": "5",
+            "cname": "Kamal",
+            "contact": "0779164423",
+            "email": "isuru.dilhan@yahoo.com",
+            "package": "Ultimate Value Car Wash",
+            "vehicleNo": "CAT-4567",
+            "amount": "4500",
+            "date": "2015-07-19",
+            "status": "Returned",
+            "returnedDate": "2015-08-20"
+        },
+        {
+            "id": "6",
+            "cname": "Isuru",
+            "contact": "0771363825",
+            "email": "isuru.dilhan@yahoo.com",
+            "package": "Ultimate Value Car Wash",
+            "vehicleNo": "CT-8967",
+            "amount": "4500",
+            "date": "2015-07-31",
+            "status": "Returned",
+            "returnedDate": "2015-07-05"
+        },
+        {
+            "id": "8",
+            "cname": "Rajika",
+            "contact": "0711363825",
+            "email": "isuru.dilhan@yahoo.com",
+            "package": "Ultimate Value Car Wash",
+            "vehicleNo": "AT-4002",
+            "amount": "4500",
+            "date": "2015-08-01",
+            "status": "Returned",
+            "returnedDate": "2015-08-01"
+        },
+        {
+            "id": "9",
+            "cname": "Sam",
+            "contact": "0771363825",
+            "email": "isuru.dilhan@yahoo.com",
+            "package": "Ultimate Value Car Wash",
+            "vehicleNo": "BAT-5567",
+            "amount": "4500",
+            "date": "2015-08-01",
+            "status": "Returned",
+            "returnedDate": "2015-08-01"
+        },
+        {
+            "id": "10",
+            "cname": "Lahiru",
+            "contact": "0779164423",
+            "email": "isuru.dilhan@yahoo.com",
+            "package": "Ultimate Value Car Wash",
+            "vehicleNo": "UT-9012",
+            "amount": "4500",
+            "date": "2015-08-16",
+            "status": "Returned",
+            "returnedDate": "2015-07-05"
+        },
+        {
+            "id": "11",
+            "cname": "Sarasi",
+            "contact": "0779164423",
+            "email": "isuru.dilhan@yahoo.com",
+            "package": "Ultimate Value Car Wash",
+            "vehicleNo": "DA-1234",
+            "amount": "4500",
+            "date": "2015-08-16",
+            "status": "Returned",
+            "returnedDate": "2015-08-28"
+        },
+        {
+            "id": "12",
+            "cname": "Kaveendra",
+            "contact": "0789164423",
+            "email": "isuru.dilhan@yahoo.com",
+            "package": "Ultimate Value Car Wash",
+            "vehicleNo": "LS-0987",
+            "amount": "4500",
+            "date": "2015-08-20",
+            "status": "Returned",
+            "returnedDate": "2015-09-30"
+        },
+        {
+            "id": "13",
+            "cname": "Nirmal",
+            "contact": "0789164423",
+            "email": "inbox.rajika@gmail.com",
+            "package": "Ultimate Value Car Wash",
+            "vehicleNo": "TT-1947",
+            "amount": "4500",
+            "date": "2015-08-20",
+            "status": "Not Returned",
+            "returnedDate": "None"
+        },
+        {
+            "id": "14",
+            "cname": "Dumindu",
+            "contact": "0778355666",
+            "email": "inbox.rajika@gmail.com",
+            "package": "Ultimate Value Car Wash",
+            "vehicleNo": "DAA-1045",
+            "amount": "4500",
+            "date": "2015-08-20",
+            "status": "Returned",
+            "returnedDate": "2015-07-01"
+        },
+        {
+            "id": "15",
+            "cname": "Amal",
+            "contact": "0771363825",
+            "email": "isuru.dilhan@yahoo.com",
+            "package": "Ultimate Value Car Wash",
+            "vehicleNo": "SPD-1134",
+            "amount": "4500",
+            "date": "2015-08-22",
+            "status": "Returned",
+            "returnedDate": "2015-08-20"
+        },
+        {
+            "id": "16",
+            "cname": "isuru",
+            "contact": "0711363825",
+            "email": "isuru.dilhan@yahoo.com",
+            "package": "Platinum Value Car Wash",
+            "vehicleNo": "AA-1234",
+            "amount": "3000",
+            "date": "2015-09-29",
+            "status": "Returned",
+            "returnedDate": "2015-09-29"
+        },
+        {
+            "id": "17",
+            "cname": "gfdgdg",
+            "contact": "0711363825",
+            "email": "isuru.dilhan@yahoo.com",
+            "package": "Platinum Value Car Wash",
+            "vehicleNo": "AA-1234",
+            "amount": "3000",
+            "date": "2015-09-30",
+            "status": "Not Returned",
+            "returnedDate": "Not Returned"
+        },
+        {
+            "id": "18",
+            "cname": "rajika",
+            "contact": "0711363825",
+            "email": "isuru.dilhan@yahoo.com",
+            "package": "Hand Wash",
+            "vehicleNo": "AA-1234",
+            "amount": "10000",
+            "date": "2015-09-30",
+            "status": "Returned",
+            "returnedDate": "2015-09-30"
+        },
+        {
+            "id": "19",
+            "cname": "rajika",
+            "contact": "0711363825",
+            "email": "isuru.dilhan@yahoo.com",
+            "package": "Hand Wash",
+            "vehicleNo": "AA-1212",
+            "amount": "10000",
+            "date": "2015-09-30",
+            "status": "Returned",
+            "returnedDate": "2015-09-30"
+        }
+    ],
+    "packages": [
+        {
+            "id": "1",
+            "name": "Platinum Value Car Wash",
+            "description": "Ultimate value car wash with mat shampoo - Limit 4",
+            "time": "48",
+            "price": "3000"
+        },
+        {
+            "id": "2",
+            "name": "Ultimate Value Car Wash",
+            "description": "Full service wash, clear coat shine, cleat coat protectant, underbody wash, tire shine, rim cleaning wheel bright, triple foam polish wax, rust inhibitor and interior fragrance spray.",
+            "time": "48",
+            "price": "5500"
+        },
+        {
+            "id": "4",
+            "name": "Hand Wash",
+            "description": "smooth washing\nhee",
+            "time": "2",
+            "price": "10000"
+        }
+    ],
+    "lu_packages": [
+        {
+            "id": "1",
+            "name": "QUICK LUBRICATION - GOLD",
+            "price": "8000",
+            "description": "A total lubricating service in only 30 minutes. It covers every essential aspect of a professional car service at a most economical price. Top up to optimal capacity or completely change it using high",
+            "duration": "30"
+        },
+        {
+            "id": "2",
+            "name": "UNDERCARRIAGE DEGREASING - GOLD",
+            "price": "8000",
+            "description": "Completely degrease the undercarriage of the automobile, removing accumulated oil and grit using the application of pressure washes with advanced pressure sensors.",
+            "duration": "20"
+        },
+        {
+            "id": "3",
+            "name": "VACUUM FLOOR \/ SEATS & TRUNK- GOLD",
+            "price": "8000",
+            "description": "Vacuum the cabin interior, seats and trunk to ensure removal of dust and particle accumulation",
+            "duration": "20"
+        },
+        {
+            "id": "4",
+            "name": "WINDSCREEN & GLASS CLEANING- GOLD",
+            "price": "8000",
+            "description": "Glass treatment improves wet weather driving visibility. The treatment uses a non-streaking formula, ammonia free and safe for tinted windows. This is ideal for high humidity conditions.",
+            "duration": "30"
+        },
+        {
+            "id": "5",
+            "name": "QUICK LUBRICATION - SILVER",
+            "price": "5000",
+            "description": "Restore the true colour and natural gloss to the dashboard and leaves tyres looking new.",
+            "duration": "30"
+        },
+        {
+            "id": "6",
+            "name": "UNDERCARRIAGE DEGREASING - SILVER",
+            "price": "5000",
+            "description": "A total lubricating service in only 30 minutes. It covers every essential aspect of a professional car service at a most economical price. Top up to optimal capacity or completely change it using high",
+            "duration": "30"
+        },
+        {
+            "id": "7",
+            "name": "VISUAL SAFETY CHECK - SILVER",
+            "price": "5000",
+            "description": "test",
+            "duration": "7"
+        },
+        {
+            "id": "10",
+            "name": " EXTERIOR WAXING - GOLD",
+            "price": "8000",
+            "description": "",
+            "duration": ""
+        },
+        {
+            "id": "11",
+            "name": "oli change",
+            "price": "1400",
+            "description": "hixs",
+            "duration": "24"
+        }
+    ],
+    "nonreglu_transactions": [
+        {
+            "id": "1",
+            "cname": "isuru",
+            "contact": "0711363825",
+            "email": "isuru.dilhan@yahoo.com",
+            "package": "VACUUM FLOOR \/ SEATS & TRUNK- GOLD",
+            "vehicleNo": "hy",
+            "amount": "8000",
+            "date": "2015-08-17"
+        }
+    ],
+    "lubricants": [
+        {
+            "Id": "2",
+            "Name": "T22",
+            "Price": "780",
+            "Quantity": "4",
+            "Supplier": "T2 dude"
+        },
+        {
+            "Id": "4",
+            "Name": "KJ",
+            "Price": "1",
+            "Quantity": "5",
+            "Supplier": "T2 dude"
+        },
+        {
+            "Id": "5",
+            "Name": "T2",
+            "Price": "475",
+            "Quantity": "20",
+            "Supplier": "T2 dude"
+        },
+        {
+            "Id": "6",
+            "Name": "Just test 2",
+            "Price": "11",
+            "Quantity": "3",
+            "Supplier": "T2 dude"
+        },
+        {
+            "Id": "7",
+            "Name": "test2",
+            "Price": "333",
+            "Quantity": "33",
+            "Supplier": "T2 dude"
+        },
+        {
+            "Id": "8",
+            "Name": "Test",
+            "Price": "124",
+            "Quantity": "45",
+            "Supplier": "T2 dude"
+        }
+    ],
+    "lubricant_expense": [
+        {
+            "Id": "1",
+            "product": "T2",
+            "price": "780",
+            "supplier": "T2 dude",
+            "quantity": "4",
+            "bquantity": "5",
+            "total": "3900",
+            "date": "2015-08-25"
+        },
+        {
+            "Id": "2",
+            "product": "T2",
+            "price": "780",
+            "supplier": "T2 dude",
+            "quantity": "4",
+            "bquantity": "5",
+            "total": "3900",
+            "date": "2015-08-25"
+        },
+        {
+            "Id": "3",
+            "product": "Greese",
+            "price": "1",
+            "supplier": "T2 dude",
+            "quantity": "5",
+            "bquantity": "4",
+            "total": "4",
+            "date": "2015-08-25"
+        },
+        {
+            "Id": "4",
+            "product": "T2",
+            "price": "780",
+            "supplier": "T2 dude",
+            "quantity": "4",
+            "bquantity": "6",
+            "total": "4680",
+            "date": "2015-08-25"
+        },
+        {
+            "Id": "5",
+            "product": "Just test 2",
+            "price": "11",
+            "supplier": "T2 dude",
+            "quantity": "3",
+            "bquantity": "7",
+            "total": "77",
+            "date": "2015-08-25"
+        },
+        {
+            "Id": "6",
+            "product": "T2",
+            "price": "780",
+            "supplier": "T2 dude",
+            "quantity": "4",
+            "bquantity": "5",
+            "total": "3900",
+            "date": "2015-08-25"
+        },
+        {
+            "Id": "7",
+            "product": "T2",
+            "price": "780",
+            "supplier": "T2 dude",
+            "quantity": "4",
+            "bquantity": "4",
+            "total": "3120",
+            "date": "2015-08-25"
+        }
+    ],
+    "lubricant_income": [
+        {
+            "prdIncomeID": "1",
+            "prdType": "KJ",
+            "quantity": "5",
+            "supplier": "T2 dude",
+            "sellingqty": "2",
+            "price": "10000",
+            "date1": "2015-09-29",
+            "lubricantincome": "20000"
+        },
+        {
+            "prdIncomeID": "2",
+            "prdType": "KJ",
+            "quantity": "5",
+            "supplier": "T2 dude",
+            "sellingqty": "2",
+            "price": "1000",
+            "date1": "2015-09-29",
+            "lubricantincome": "2000"
+        },
+        {
+            "prdIncomeID": "3",
+            "prdType": "KJ",
+            "quantity": "5",
+            "supplier": "T2 dude",
+            "sellingqty": "2",
+            "price": "1000",
+            "date1": "2015-09-29",
+            "lubricantincome": "2000"
+        },
+        {
+            "prdIncomeID": "4",
+            "prdType": "KJ",
+            "quantity": "5",
+            "supplier": "T2 dude",
+            "sellingqty": "2",
+            "price": "10000",
+            "date1": "2015-09-29",
+            "lubricantincome": "20000"
+        },
+        {
+            "prdIncomeID": "5",
+            "prdType": "KJ",
+            "quantity": "5",
+            "supplier": "T2 dude",
+            "sellingqty": "2",
+            "price": "1000",
+            "date1": "2015-09-29",
+            "lubricantincome": "2000"
+        },
+        {
+            "prdIncomeID": "6",
+            "prdType": "KJ",
+            "quantity": "5",
+            "supplier": "T2 dude",
+            "sellingqty": "2",
+            "price": "1000",
+            "date1": "2015-09-29",
+            "lubricantincome": "2000"
+        },
+        {
+            "prdIncomeID": "7",
+            "prdType": "KJ",
+            "quantity": "5",
+            "supplier": "T2 dude",
+            "sellingqty": "2",
+            "price": "1000",
+            "date1": "2015-09-29",
+            "lubricantincome": "2000"
+        },
+        {
+            "prdIncomeID": "8",
+            "prdType": "",
+            "quantity": "0",
+            "supplier": "",
+            "sellingqty": "0",
+            "price": "0",
+            "date1": "2015-09-29",
+            "lubricantincome": "0"
+        },
+        {
+            "prdIncomeID": "9",
+            "prdType": "Just test 2",
+            "quantity": "3",
+            "supplier": "T2 dude",
+            "sellingqty": "3",
+            "price": "1111",
+            "date1": "2015-09-29",
+            "lubricantincome": "3333"
+        },
+        {
+            "prdIncomeID": "10",
+            "prdType": "test2",
+            "quantity": "33",
+            "supplier": "T2 dude",
+            "sellingqty": "2",
+            "price": "333333",
+            "date1": "2015-09-29",
+            "lubricantincome": "666666"
+        },
+        {
+            "prdIncomeID": "11",
+            "prdType": "",
+            "quantity": "0",
+            "supplier": "",
+            "sellingqty": "0",
+            "price": "0",
+            "date1": "2015-09-30",
+            "lubricantincome": "0"
+        }
+    ],
+    "fuel_expense": [
+        {
+            "Id": "1",
+            "expfueltype": "Petrol",
+            "capacity": "19800",
+            "date": "2015-08-24",
+            "fuelpayment": "3434"
+        },
+        {
+            "Id": "3",
+            "expfueltype": "Diesel",
+            "capacity": "6600",
+            "date": "2015-08-24",
+            "fuelpayment": "5000"
+        },
+        {
+            "Id": "4",
+            "expfueltype": "SPetrol",
+            "capacity": "19800",
+            "date": "2015-08-25",
+            "fuelpayment": "75800"
+        },
+        {
+            "Id": "5",
+            "expfueltype": "SPetrol",
+            "capacity": "19800",
+            "date": "2015-08-25",
+            "fuelpayment": "4500"
+        },
+        {
+            "Id": "9",
+            "expfueltype": "Petrol",
+            "capacity": "19800",
+            "date": "2015-08-25",
+            "fuelpayment": "1600"
+        }
+    ],
+    "fuel_income": [
+        {
+            "incomeID": "1",
+            "empID": "PM-237",
+            "empName": "",
+            "fueltype": "petrol",
+            "amount": "50",
+            "date": "2015-09-29",
+            "fuelincome": "0"
+        },
+        {
+            "incomeID": "2",
+            "empID": "PM-237",
+            "empName": "",
+            "fueltype": "diesel",
+            "amount": "20",
+            "date": "2015-09-29",
+            "fuelincome": "0"
+        },
+        {
+            "incomeID": "3",
+            "empID": "PM-237",
+            "empName": "",
+            "fueltype": "diesel",
+            "amount": "45",
+            "date": "2015-09-30",
+            "fuelincome": "0"
+        },
+        {
+            "incomeID": "4",
+            "empID": "MG-789",
+            "empName": "",
+            "fueltype": "petrol",
+            "amount": "20",
+            "date": "2015-09-30",
+            "fuelincome": "0"
+        }
+    ],
+    "payment": [
+        {
+            "Id": "1",
+            "empID": "MG-795",
+            "empName": "damman man",
+            "date": "2015-08-25",
+            "paid": "1600"
+        },
+        {
+            "Id": "4",
+            "empID": "MG-795",
+            "empName": "damman man",
+            "date": "2015-08-25",
+            "paid": "1500"
+        }
+    ],
+    "orders": [
+        {
+            "Id": "77",
+            "FuelType": "Diesel",
+            "Reading": "200",
+            "Quantity": "400",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "78",
+            "FuelType": "SDiesel",
+            "Reading": "1200",
+            "Quantity": "2400",
+            "Orderamnt": "19800",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "79",
+            "FuelType": "Petrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "80",
+            "FuelType": "SPetrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "81",
+            "FuelType": "Diesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "82",
+            "FuelType": "SDiesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "83",
+            "FuelType": "Petrol",
+            "Reading": "700",
+            "Quantity": "1400",
+            "Orderamnt": "19800",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "84",
+            "FuelType": "SPetrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "85",
+            "FuelType": "Diesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "86",
+            "FuelType": "SDiesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "87",
+            "FuelType": "Petrol",
+            "Reading": "700",
+            "Quantity": "1400",
+            "Orderamnt": "19800",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "88",
+            "FuelType": "SPetrol",
+            "Reading": "200",
+            "Quantity": "400",
+            "Orderamnt": "19800",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "89",
+            "FuelType": "Diesel",
+            "Reading": "700",
+            "Quantity": "1400",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "90",
+            "FuelType": "SDiesel",
+            "Reading": "1200",
+            "Quantity": "2400",
+            "Orderamnt": "19800",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "91",
+            "FuelType": "Petrol",
+            "Reading": "200",
+            "Quantity": "400",
+            "Orderamnt": "19800",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "92",
+            "FuelType": "SPetrol",
+            "Reading": "700",
+            "Quantity": "1400",
+            "Orderamnt": "19800",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "93",
+            "FuelType": "Diesel",
+            "Reading": "700",
+            "Quantity": "1400",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "94",
+            "FuelType": "SDiesel",
+            "Reading": "200",
+            "Quantity": "400",
+            "Orderamnt": "19800",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "95",
+            "FuelType": "Petrol",
+            "Reading": "200",
+            "Quantity": "400",
+            "Orderamnt": "19800",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "96",
+            "FuelType": "SPetrol",
+            "Reading": "700",
+            "Quantity": "1400",
+            "Orderamnt": "19800",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "97",
+            "FuelType": "Diesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "98",
+            "FuelType": "SDiesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "99",
+            "FuelType": "Petrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "100",
+            "FuelType": "SPetrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "101",
+            "FuelType": "Diesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "102",
+            "FuelType": "SDiesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "103",
+            "FuelType": "Petrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "104",
+            "FuelType": "SPetrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "105",
+            "FuelType": "Diesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "106",
+            "FuelType": "SDiesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "107",
+            "FuelType": "Petrol",
+            "Reading": "200",
+            "Quantity": "400",
+            "Orderamnt": "19800",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "108",
+            "FuelType": "Petrol",
+            "Reading": "200",
+            "Quantity": "400",
+            "Orderamnt": "19800",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "109",
+            "FuelType": "SPetrol",
+            "Reading": "700",
+            "Quantity": "1400",
+            "Orderamnt": "19800",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "110",
+            "FuelType": "SPetrol",
+            "Reading": "700",
+            "Quantity": "1400",
+            "Orderamnt": "19800",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "111",
+            "FuelType": "Diesel",
+            "Reading": "700",
+            "Quantity": "1400",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "112",
+            "FuelType": "Diesel",
+            "Reading": "700",
+            "Quantity": "1400",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "113",
+            "FuelType": "SDiesel",
+            "Reading": "1200",
+            "Quantity": "2400",
+            "Orderamnt": "19800",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "114",
+            "FuelType": "SDiesel",
+            "Reading": "1200",
+            "Quantity": "2400",
+            "Orderamnt": "19800",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "115",
+            "FuelType": "Petrol",
+            "Reading": "200",
+            "Quantity": "400",
+            "Orderamnt": "19800",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "116",
+            "FuelType": "SPetrol",
+            "Reading": "700",
+            "Quantity": "1400",
+            "Orderamnt": "19800",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "117",
+            "FuelType": "Diesel",
+            "Reading": "700",
+            "Quantity": "1400",
+            "Orderamnt": "6600",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "118",
+            "FuelType": "SDiesel",
+            "Reading": "1200",
+            "Quantity": "2400",
+            "Orderamnt": "19800",
+            "Date": "2015-08-02"
+        },
+        {
+            "Id": "253",
+            "FuelType": "Diesel",
+            "Reading": "23",
+            "Quantity": "6767",
+            "Orderamnt": "13200",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "256",
+            "FuelType": "SPetrol",
+            "Reading": "5",
+            "Quantity": "723",
+            "Orderamnt": "6600",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "262",
+            "FuelType": "SDiesel",
+            "Reading": "151.5",
+            "Quantity": "11530",
+            "Orderamnt": "13200",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "264",
+            "FuelType": "SPetrol",
+            "Reading": "146",
+            "Quantity": "11111",
+            "Orderamnt": "13200",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "268",
+            "FuelType": "SPetrol",
+            "Reading": "7",
+            "Quantity": "533",
+            "Orderamnt": "19800",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "269",
+            "FuelType": "Diesel",
+            "Reading": "6",
+            "Quantity": "596",
+            "Orderamnt": "6600",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "276",
+            "FuelType": "SPetrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "280",
+            "FuelType": "SPetrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "284",
+            "FuelType": "SPetrol",
+            "Reading": "1.5",
+            "Quantity": "114",
+            "Orderamnt": "19800",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "288",
+            "FuelType": "SPetrol",
+            "Reading": "8.5",
+            "Quantity": "647",
+            "Orderamnt": "19800",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "289",
+            "FuelType": "Diesel",
+            "Reading": "8",
+            "Quantity": "795",
+            "Orderamnt": "6600",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "290",
+            "FuelType": "SDiesel",
+            "Reading": "9.5",
+            "Quantity": "723",
+            "Orderamnt": "19800",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "291",
+            "FuelType": "Petrol",
+            "Reading": "117.5",
+            "Quantity": "11675",
+            "Orderamnt": "19800",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "292",
+            "FuelType": "SPetrol",
+            "Reading": "145",
+            "Quantity": "11035",
+            "Orderamnt": "19800",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "293",
+            "FuelType": "Diesel",
+            "Reading": "43",
+            "Quantity": "4272",
+            "Orderamnt": "6600",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "294",
+            "FuelType": "SDiesel",
+            "Reading": "161.5",
+            "Quantity": "12291",
+            "Orderamnt": "19800",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "296",
+            "FuelType": "SPetrol",
+            "Reading": "51.5",
+            "Quantity": "3919",
+            "Orderamnt": "19800",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "297",
+            "FuelType": "Diesel",
+            "Reading": "60",
+            "Quantity": "5962",
+            "Orderamnt": "6600",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "298",
+            "FuelType": "SDiesel",
+            "Reading": "95",
+            "Quantity": "7230",
+            "Orderamnt": "19800",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "300",
+            "FuelType": "SPetrol",
+            "Reading": "119.5",
+            "Quantity": "9094",
+            "Orderamnt": "19800",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "301",
+            "FuelType": "Diesel",
+            "Reading": "70",
+            "Quantity": "6955",
+            "Orderamnt": "6600",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "302",
+            "FuelType": "SDiesel",
+            "Reading": "157",
+            "Quantity": "11948",
+            "Orderamnt": "19800",
+            "Date": "2015-08-22"
+        },
+        {
+            "Id": "303",
+            "FuelType": "Petrol",
+            "Reading": "64.5",
+            "Quantity": "6409",
+            "Orderamnt": "19800",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "304",
+            "FuelType": "SPetrol",
+            "Reading": "7",
+            "Quantity": "533",
+            "Orderamnt": "19800",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "305",
+            "FuelType": "Diesel",
+            "Reading": "8",
+            "Quantity": "795",
+            "Orderamnt": "6600",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "306",
+            "FuelType": "SDiesel",
+            "Reading": "2",
+            "Quantity": "152",
+            "Orderamnt": "19800",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "307",
+            "FuelType": "Petrol",
+            "Reading": "119.5",
+            "Quantity": "11873",
+            "Orderamnt": "19800",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "308",
+            "FuelType": "SPetrol",
+            "Reading": "126",
+            "Quantity": "9589",
+            "Orderamnt": "19800",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "309",
+            "FuelType": "Diesel",
+            "Reading": "45",
+            "Quantity": "4471",
+            "Orderamnt": "6600",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "310",
+            "FuelType": "SDiesel",
+            "Reading": "111.5",
+            "Quantity": "8486",
+            "Orderamnt": "19800",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "311",
+            "FuelType": "Petrol",
+            "Reading": "4",
+            "Quantity": "397",
+            "Orderamnt": "19800",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "312",
+            "FuelType": "SPetrol",
+            "Reading": "7",
+            "Quantity": "533",
+            "Orderamnt": "13200",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "313",
+            "FuelType": "Diesel",
+            "Reading": "8",
+            "Quantity": "795",
+            "Orderamnt": "6600",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "314",
+            "FuelType": "SDiesel",
+            "Reading": "8.5",
+            "Quantity": "647",
+            "Orderamnt": "19800",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "315",
+            "FuelType": "Petrol",
+            "Reading": "2",
+            "Quantity": "199",
+            "Orderamnt": "19800",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "316",
+            "FuelType": "SPetrol",
+            "Reading": "6",
+            "Quantity": "457",
+            "Orderamnt": "19800",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "317",
+            "FuelType": "Diesel",
+            "Reading": "7",
+            "Quantity": "696",
+            "Orderamnt": "6600",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "318",
+            "FuelType": "SDiesel",
+            "Reading": "7.5",
+            "Quantity": "571",
+            "Orderamnt": "19800",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "319",
+            "FuelType": "Petrol",
+            "Reading": "3",
+            "Quantity": "298",
+            "Orderamnt": "13200",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "320",
+            "FuelType": "SPetrol",
+            "Reading": "3.5",
+            "Quantity": "266",
+            "Orderamnt": "6600",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "321",
+            "FuelType": "Diesel",
+            "Reading": "6.5",
+            "Quantity": "646",
+            "Orderamnt": "6600",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "322",
+            "FuelType": "SDiesel",
+            "Reading": "3.5",
+            "Quantity": "266",
+            "Orderamnt": "19800",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "323",
+            "FuelType": "Petrol",
+            "Reading": "0.5",
+            "Quantity": "50",
+            "Orderamnt": "19800",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "324",
+            "FuelType": "SPetrol",
+            "Reading": "8.5",
+            "Quantity": "647",
+            "Orderamnt": "19800",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "325",
+            "FuelType": "Diesel",
+            "Reading": "5.5",
+            "Quantity": "546",
+            "Orderamnt": "6600",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "326",
+            "FuelType": "SDiesel",
+            "Reading": "1.5",
+            "Quantity": "114",
+            "Orderamnt": "19800",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "327",
+            "FuelType": "Petrol",
+            "Reading": "1",
+            "Quantity": "99",
+            "Orderamnt": "19800",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "328",
+            "FuelType": "SPetrol",
+            "Reading": "6.5",
+            "Quantity": "495",
+            "Orderamnt": "19800",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "329",
+            "FuelType": "Diesel",
+            "Reading": "6.5",
+            "Quantity": "646",
+            "Orderamnt": "6600",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "330",
+            "FuelType": "SDiesel",
+            "Reading": "6.5",
+            "Quantity": "495",
+            "Orderamnt": "19800",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "331",
+            "FuelType": "Petrol",
+            "Reading": "7.5",
+            "Quantity": "745",
+            "Orderamnt": "19800",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "332",
+            "FuelType": "SPetrol",
+            "Reading": "8",
+            "Quantity": "609",
+            "Orderamnt": "6600",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "333",
+            "FuelType": "Diesel",
+            "Reading": "8.5",
+            "Quantity": "845",
+            "Orderamnt": "6600",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "334",
+            "FuelType": "SDiesel",
+            "Reading": "5.5",
+            "Quantity": "419",
+            "Orderamnt": "19800",
+            "Date": "2015-08-23"
+        },
+        {
+            "Id": "335",
+            "FuelType": "Petrol",
+            "Reading": "1",
+            "Quantity": "99",
+            "Orderamnt": "19800",
+            "Date": "2015-08-24"
+        },
+        {
+            "Id": "336",
+            "FuelType": "SPetrol",
+            "Reading": "7",
+            "Quantity": "533",
+            "Orderamnt": "19800",
+            "Date": "2015-08-24"
+        },
+        {
+            "Id": "337",
+            "FuelType": "Diesel",
+            "Reading": "7",
+            "Quantity": "696",
+            "Orderamnt": "6600",
+            "Date": "2015-08-24"
+        },
+        {
+            "Id": "338",
+            "FuelType": "SDiesel",
+            "Reading": "6.5",
+            "Quantity": "495",
+            "Orderamnt": "19800",
+            "Date": "2015-08-24"
+        },
+        {
+            "Id": "339",
+            "FuelType": "Petrol",
+            "Reading": "3.5",
+            "Quantity": "348",
+            "Orderamnt": "19800",
+            "Date": "2015-08-25"
+        },
+        {
+            "Id": "340",
+            "FuelType": "SPetrol",
+            "Reading": "7.5",
+            "Quantity": "571",
+            "Orderamnt": "19800",
+            "Date": "2015-08-25"
+        },
+        {
+            "Id": "341",
+            "FuelType": "Diesel",
+            "Reading": "5.5",
+            "Quantity": "546",
+            "Orderamnt": "6600",
+            "Date": "2015-08-25"
+        },
+        {
+            "Id": "342",
+            "FuelType": "SDiesel",
+            "Reading": "1.5",
+            "Quantity": "114",
+            "Orderamnt": "19800",
+            "Date": "2015-08-25"
+        },
+        {
+            "Id": "343",
+            "FuelType": "Petrol",
+            "Reading": "2.5",
+            "Quantity": "248",
+            "Orderamnt": "19800",
+            "Date": "2015-08-25"
+        },
+        {
+            "Id": "344",
+            "FuelType": "SPetrol",
+            "Reading": "1.5",
+            "Quantity": "114",
+            "Orderamnt": "19800",
+            "Date": "2015-08-25"
+        },
+        {
+            "Id": "345",
+            "FuelType": "Diesel",
+            "Reading": "4",
+            "Quantity": "397",
+            "Orderamnt": "6600",
+            "Date": "2015-08-25"
+        },
+        {
+            "Id": "346",
+            "FuelType": "SDiesel",
+            "Reading": "5",
+            "Quantity": "381",
+            "Orderamnt": "19800",
+            "Date": "2015-08-25"
+        },
+        {
+            "Id": "347",
+            "FuelType": "Petrol",
+            "Reading": "7",
+            "Quantity": "696",
+            "Orderamnt": "19800",
+            "Date": "2015-08-25"
+        },
+        {
+            "Id": "348",
+            "FuelType": "SPetrol",
+            "Reading": "5",
+            "Quantity": "381",
+            "Orderamnt": "19800",
+            "Date": "2015-08-25"
+        },
+        {
+            "Id": "349",
+            "FuelType": "Diesel",
+            "Reading": "8",
+            "Quantity": "795",
+            "Orderamnt": "6600",
+            "Date": "2015-08-25"
+        },
+        {
+            "Id": "350",
+            "FuelType": "SDiesel",
+            "Reading": "7",
+            "Quantity": "533",
+            "Orderamnt": "19800",
+            "Date": "2015-08-25"
+        },
+        {
+            "Id": "351",
+            "FuelType": "Petrol",
+            "Reading": "104.5",
+            "Quantity": "10383",
+            "Orderamnt": "19800",
+            "Date": "2015-08-25"
+        },
+        {
+            "Id": "352",
+            "FuelType": "SPetrol",
+            "Reading": "95",
+            "Quantity": "7230",
+            "Orderamnt": "13200",
+            "Date": "2015-08-25"
+        },
+        {
+            "Id": "353",
+            "FuelType": "Diesel",
+            "Reading": "104.5",
+            "Quantity": "10383",
+            "Orderamnt": "6600",
+            "Date": "2015-08-25"
+        },
+        {
+            "Id": "354",
+            "FuelType": "SDiesel",
+            "Reading": "78",
+            "Quantity": "5936",
+            "Orderamnt": "19800",
+            "Date": "2015-08-25"
+        },
+        {
+            "Id": "355",
+            "FuelType": "Petrol",
+            "Reading": "3.5",
+            "Quantity": "348",
+            "Orderamnt": "19800",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "356",
+            "FuelType": "SPetrol",
+            "Reading": "7.5",
+            "Quantity": "571",
+            "Orderamnt": "19800",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "357",
+            "FuelType": "Diesel",
+            "Reading": "8.5",
+            "Quantity": "845",
+            "Orderamnt": "6600",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "358",
+            "FuelType": "SDiesel",
+            "Reading": "6",
+            "Quantity": "457",
+            "Orderamnt": "19800",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "359",
+            "FuelType": "Petrol",
+            "Reading": "199.5",
+            "Quantity": "19822",
+            "Orderamnt": "19800",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "360",
+            "FuelType": "SPetrol",
+            "Reading": "6",
+            "Quantity": "457",
+            "Orderamnt": "19800",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "361",
+            "FuelType": "Diesel",
+            "Reading": "5",
+            "Quantity": "497",
+            "Orderamnt": "6600",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "362",
+            "FuelType": "SDiesel",
+            "Reading": "9",
+            "Quantity": "685",
+            "Orderamnt": "19800",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "363",
+            "FuelType": "Petrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "364",
+            "FuelType": "SPetrol",
+            "Reading": "210.5",
+            "Quantity": "16020",
+            "Orderamnt": "19800",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "365",
+            "FuelType": "Diesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "366",
+            "FuelType": "SDiesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "367",
+            "FuelType": "Petrol",
+            "Reading": "226",
+            "Quantity": "22455",
+            "Orderamnt": "19800",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "368",
+            "FuelType": "SPetrol",
+            "Reading": "8.5",
+            "Quantity": "647",
+            "Orderamnt": "19800",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "369",
+            "FuelType": "Diesel",
+            "Reading": "86",
+            "Quantity": "8545",
+            "Orderamnt": "6600",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "370",
+            "FuelType": "SDiesel",
+            "Reading": "95",
+            "Quantity": "7230",
+            "Orderamnt": "19800",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "371",
+            "FuelType": "Petrol",
+            "Reading": "200",
+            "Quantity": "19872",
+            "Orderamnt": "19800",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "372",
+            "FuelType": "SPetrol",
+            "Reading": "188.5",
+            "Quantity": "14346",
+            "Orderamnt": "19800",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "373",
+            "FuelType": "Diesel",
+            "Reading": "207.5",
+            "Quantity": "20617",
+            "Orderamnt": "6600",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "374",
+            "FuelType": "SDiesel",
+            "Reading": "179.5",
+            "Quantity": "13661",
+            "Orderamnt": "19800",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "375",
+            "FuelType": "Petrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "376",
+            "FuelType": "SPetrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "377",
+            "FuelType": "Diesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "378",
+            "FuelType": "SDiesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "379",
+            "FuelType": "Petrol",
+            "Reading": "5",
+            "Quantity": "497",
+            "Orderamnt": "19800",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "380",
+            "FuelType": "SPetrol",
+            "Reading": "8.5",
+            "Quantity": "647",
+            "Orderamnt": "19800",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "381",
+            "FuelType": "Diesel",
+            "Reading": "8",
+            "Quantity": "795",
+            "Orderamnt": "6600",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "382",
+            "FuelType": "SDiesel",
+            "Reading": "8",
+            "Quantity": "609",
+            "Orderamnt": "19800",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "383",
+            "FuelType": "Petrol",
+            "Reading": "240",
+            "Quantity": "23846",
+            "Orderamnt": "13200",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "384",
+            "FuelType": "SPetrol",
+            "Reading": "182.5",
+            "Quantity": "13889",
+            "Orderamnt": "6600",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "385",
+            "FuelType": "Diesel",
+            "Reading": "113",
+            "Quantity": "11228",
+            "Orderamnt": "6600",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "386",
+            "FuelType": "SDiesel",
+            "Reading": "154",
+            "Quantity": "11720",
+            "Orderamnt": "13200",
+            "Date": "2015-08-26"
+        },
+        {
+            "Id": "387",
+            "FuelType": "Petrol",
+            "Reading": "2.5",
+            "Quantity": "248",
+            "Orderamnt": "19800",
+            "Date": "2015-08-27"
+        },
+        {
+            "Id": "388",
+            "FuelType": "SPetrol",
+            "Reading": "6",
+            "Quantity": "457",
+            "Orderamnt": "19800",
+            "Date": "2015-08-27"
+        },
+        {
+            "Id": "389",
+            "FuelType": "Diesel",
+            "Reading": "5",
+            "Quantity": "497",
+            "Orderamnt": "6600",
+            "Date": "2015-08-27"
+        },
+        {
+            "Id": "390",
+            "FuelType": "SDiesel",
+            "Reading": "2.5",
+            "Quantity": "190",
+            "Orderamnt": "19800",
+            "Date": "2015-08-27"
+        },
+        {
+            "Id": "391",
+            "FuelType": "Petrol",
+            "Reading": "6",
+            "Quantity": "596",
+            "Orderamnt": "13200",
+            "Date": "2015-08-31"
+        },
+        {
+            "Id": "392",
+            "FuelType": "SPetrol",
+            "Reading": "6",
+            "Quantity": "457",
+            "Orderamnt": "19800",
+            "Date": "2015-08-31"
+        },
+        {
+            "Id": "393",
+            "FuelType": "Diesel",
+            "Reading": "7",
+            "Quantity": "696",
+            "Orderamnt": "6600",
+            "Date": "2015-08-31"
+        },
+        {
+            "Id": "394",
+            "FuelType": "SDiesel",
+            "Reading": "5",
+            "Quantity": "381",
+            "Orderamnt": "19800",
+            "Date": "2015-08-31"
+        },
+        {
+            "Id": "395",
+            "FuelType": "Petrol",
+            "Reading": "6",
+            "Quantity": "596",
+            "Orderamnt": "19800",
+            "Date": "2015-09-02"
+        },
+        {
+            "Id": "396",
+            "FuelType": "SPetrol",
+            "Reading": "7.5",
+            "Quantity": "571",
+            "Orderamnt": "19800",
+            "Date": "2015-09-02"
+        },
+        {
+            "Id": "397",
+            "FuelType": "Diesel",
+            "Reading": "5.5",
+            "Quantity": "546",
+            "Orderamnt": "6600",
+            "Date": "2015-09-02"
+        },
+        {
+            "Id": "398",
+            "FuelType": "SDiesel",
+            "Reading": "5.5",
+            "Quantity": "419",
+            "Orderamnt": "19800",
+            "Date": "2015-09-02"
+        },
+        {
+            "Id": "399",
+            "FuelType": "Petrol",
+            "Reading": "234.5",
+            "Quantity": "23300",
+            "Orderamnt": "13200",
+            "Date": "2015-09-02"
+        },
+        {
+            "Id": "400",
+            "FuelType": "SPetrol",
+            "Reading": "77.5",
+            "Quantity": "5898",
+            "Orderamnt": "19800",
+            "Date": "2015-09-02"
+        },
+        {
+            "Id": "401",
+            "FuelType": "Diesel",
+            "Reading": "9",
+            "Quantity": "894",
+            "Orderamnt": "6600",
+            "Date": "2015-09-02"
+        },
+        {
+            "Id": "402",
+            "FuelType": "SDiesel",
+            "Reading": "171.5",
+            "Quantity": "13052",
+            "Orderamnt": "19800",
+            "Date": "2015-09-02"
+        },
+        {
+            "Id": "404",
+            "FuelType": "SPetrol",
+            "Reading": "60",
+            "Quantity": "4566",
+            "Orderamnt": "19800",
+            "Date": "2015-09-03"
+        },
+        {
+            "Id": "405",
+            "FuelType": "Diesel",
+            "Reading": "7.5",
+            "Quantity": "745",
+            "Orderamnt": "6600",
+            "Date": "2015-09-03"
+        },
+        {
+            "Id": "406",
+            "FuelType": "SDiesel",
+            "Reading": "9.5",
+            "Quantity": "723",
+            "Orderamnt": "19800",
+            "Date": "2015-09-03"
+        },
+        {
+            "Id": "408",
+            "FuelType": "SPetrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-03"
+        },
+        {
+            "Id": "409",
+            "FuelType": "Diesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-03"
+        },
+        {
+            "Id": "410",
+            "FuelType": "SDiesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-03"
+        },
+        {
+            "Id": "412",
+            "FuelType": "SPetrol",
+            "Reading": "8.5",
+            "Quantity": "647",
+            "Orderamnt": "19800",
+            "Date": "2015-09-03"
+        },
+        {
+            "Id": "413",
+            "FuelType": "Diesel",
+            "Reading": "8",
+            "Quantity": "795",
+            "Orderamnt": "6600",
+            "Date": "2015-09-03"
+        },
+        {
+            "Id": "414",
+            "FuelType": "SDiesel",
+            "Reading": "8",
+            "Quantity": "609",
+            "Orderamnt": "19800",
+            "Date": "2015-09-03"
+        },
+        {
+            "Id": "415",
+            "FuelType": "Petrol",
+            "Reading": "4.5",
+            "Quantity": "447",
+            "Orderamnt": "19800",
+            "Date": "2015-09-03"
+        },
+        {
+            "Id": "416",
+            "FuelType": "SPetrol",
+            "Reading": "111",
+            "Quantity": "8448",
+            "Orderamnt": "19800",
+            "Date": "2015-09-03"
+        },
+        {
+            "Id": "417",
+            "FuelType": "Diesel",
+            "Reading": "138.5",
+            "Quantity": "13761",
+            "Orderamnt": "6600",
+            "Date": "2015-09-03"
+        },
+        {
+            "Id": "418",
+            "FuelType": "SDiesel",
+            "Reading": "7.5",
+            "Quantity": "571",
+            "Orderamnt": "19800",
+            "Date": "2015-09-03"
+        },
+        {
+            "Id": "419",
+            "FuelType": "Petrol",
+            "Reading": "121.5",
+            "Quantity": "12072",
+            "Orderamnt": "6600",
+            "Date": "2015-09-03"
+        },
+        {
+            "Id": "420",
+            "FuelType": "SPetrol",
+            "Reading": "210",
+            "Quantity": "15982",
+            "Orderamnt": "19800",
+            "Date": "2015-09-03"
+        },
+        {
+            "Id": "421",
+            "FuelType": "Diesel",
+            "Reading": "61.5",
+            "Quantity": "6111",
+            "Orderamnt": "6600",
+            "Date": "2015-09-03"
+        },
+        {
+            "Id": "422",
+            "FuelType": "SDiesel",
+            "Reading": "172.5",
+            "Quantity": "13128",
+            "Orderamnt": "19800",
+            "Date": "2015-09-03"
+        },
+        {
+            "Id": "423",
+            "FuelType": "Petrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-05"
+        },
+        {
+            "Id": "424",
+            "FuelType": "Petrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-05"
+        },
+        {
+            "Id": "425",
+            "FuelType": "SPetrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-05"
+        },
+        {
+            "Id": "426",
+            "FuelType": "SPetrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-05"
+        },
+        {
+            "Id": "427",
+            "FuelType": "Diesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-05"
+        },
+        {
+            "Id": "428",
+            "FuelType": "Diesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-05"
+        },
+        {
+            "Id": "429",
+            "FuelType": "SDiesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-05"
+        },
+        {
+            "Id": "430",
+            "FuelType": "SDiesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-05"
+        },
+        {
+            "Id": "431",
+            "FuelType": "Petrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-05"
+        },
+        {
+            "Id": "432",
+            "FuelType": "SPetrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-05"
+        },
+        {
+            "Id": "433",
+            "FuelType": "Diesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-05"
+        },
+        {
+            "Id": "434",
+            "FuelType": "SDiesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-05"
+        },
+        {
+            "Id": "435",
+            "FuelType": "Petrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-05"
+        },
+        {
+            "Id": "436",
+            "FuelType": "SPetrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-05"
+        },
+        {
+            "Id": "437",
+            "FuelType": "Diesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-05"
+        },
+        {
+            "Id": "438",
+            "FuelType": "SDiesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-05"
+        },
+        {
+            "Id": "439",
+            "FuelType": "Petrol",
+            "Reading": "219",
+            "Quantity": "21760",
+            "Orderamnt": "13200",
+            "Date": "2015-09-21"
+        },
+        {
+            "Id": "440",
+            "FuelType": "SPetrol",
+            "Reading": "106.5",
+            "Quantity": "8105",
+            "Orderamnt": "6600",
+            "Date": "2015-09-21"
+        },
+        {
+            "Id": "441",
+            "FuelType": "Diesel",
+            "Reading": "235.5",
+            "Quantity": "23399",
+            "Orderamnt": "6600",
+            "Date": "2015-09-21"
+        },
+        {
+            "Id": "442",
+            "FuelType": "SDiesel",
+            "Reading": "208",
+            "Quantity": "15830",
+            "Orderamnt": "19800",
+            "Date": "2015-09-21"
+        },
+        {
+            "Id": "443",
+            "FuelType": "Petrol",
+            "Reading": "196.5",
+            "Quantity": "19524",
+            "Orderamnt": "19800",
+            "Date": "2015-09-22"
+        },
+        {
+            "Id": "445",
+            "FuelType": "Diesel",
+            "Reading": "137",
+            "Quantity": "13612",
+            "Orderamnt": "6600",
+            "Date": "2015-09-22"
+        },
+        {
+            "Id": "446",
+            "FuelType": "SDiesel",
+            "Reading": "154.5",
+            "Quantity": "11758",
+            "Orderamnt": "19800",
+            "Date": "2015-09-22"
+        },
+        {
+            "Id": "471",
+            "FuelType": "Petrol",
+            "Reading": "243.5",
+            "Quantity": "24194",
+            "Orderamnt": "19800",
+            "Date": "2015-09-26"
+        },
+        {
+            "Id": "472",
+            "FuelType": "SPetrol",
+            "Reading": "209.5",
+            "Quantity": "15944",
+            "Orderamnt": "19800",
+            "Date": "2015-09-26"
+        },
+        {
+            "Id": "473",
+            "FuelType": "Diesel",
+            "Reading": "153.5",
+            "Quantity": "15252",
+            "Orderamnt": "6600",
+            "Date": "2015-09-26"
+        },
+        {
+            "Id": "474",
+            "FuelType": "SDiesel",
+            "Reading": "146",
+            "Quantity": "11111",
+            "Orderamnt": "19800",
+            "Date": "2015-09-26"
+        },
+        {
+            "Id": "475",
+            "FuelType": "Petrol",
+            "Reading": "0.5",
+            "Quantity": "50",
+            "Orderamnt": "19800",
+            "Date": "2015-09-29"
+        },
+        {
+            "Id": "476",
+            "FuelType": "SPetrol",
+            "Reading": "2.5",
+            "Quantity": "190",
+            "Orderamnt": "19800",
+            "Date": "2015-09-29"
+        },
+        {
+            "Id": "477",
+            "FuelType": "Diesel",
+            "Reading": "8",
+            "Quantity": "795",
+            "Orderamnt": "6600",
+            "Date": "2015-09-29"
+        },
+        {
+            "Id": "478",
+            "FuelType": "SDiesel",
+            "Reading": "7",
+            "Quantity": "533",
+            "Orderamnt": "19800",
+            "Date": "2015-09-29"
+        },
+        {
+            "Id": "479",
+            "FuelType": "Petrol",
+            "Reading": "2.5",
+            "Quantity": "248",
+            "Orderamnt": "19800",
+            "Date": "2015-09-29"
+        },
+        {
+            "Id": "480",
+            "FuelType": "SPetrol",
+            "Reading": "1.5",
+            "Quantity": "114",
+            "Orderamnt": "19800",
+            "Date": "2015-09-29"
+        },
+        {
+            "Id": "481",
+            "FuelType": "Diesel",
+            "Reading": "6.5",
+            "Quantity": "646",
+            "Orderamnt": "6600",
+            "Date": "2015-09-29"
+        },
+        {
+            "Id": "482",
+            "FuelType": "SDiesel",
+            "Reading": "1.5",
+            "Quantity": "114",
+            "Orderamnt": "19800",
+            "Date": "2015-09-29"
+        },
+        {
+            "Id": "483",
+            "FuelType": "Petrol",
+            "Reading": "0.5",
+            "Quantity": "50",
+            "Orderamnt": "19800",
+            "Date": "2015-09-30"
+        },
+        {
+            "Id": "484",
+            "FuelType": "SPetrol",
+            "Reading": "0.5",
+            "Quantity": "38",
+            "Orderamnt": "19800",
+            "Date": "2015-09-30"
+        },
+        {
+            "Id": "485",
+            "FuelType": "Diesel",
+            "Reading": "6",
+            "Quantity": "596",
+            "Orderamnt": "6600",
+            "Date": "2015-09-30"
+        },
+        {
+            "Id": "486",
+            "FuelType": "SDiesel",
+            "Reading": "5",
+            "Quantity": "381",
+            "Orderamnt": "19800",
+            "Date": "2015-09-30"
+        },
+        {
+            "Id": "487",
+            "FuelType": "Petrol",
+            "Reading": "243.5",
+            "Quantity": "24194",
+            "Orderamnt": "19800",
+            "Date": "2015-09-30"
+        },
+        {
+            "Id": "488",
+            "FuelType": "SPetrol",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-30"
+        },
+        {
+            "Id": "489",
+            "FuelType": "Diesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-30"
+        },
+        {
+            "Id": "490",
+            "FuelType": "SDiesel",
+            "Reading": "0",
+            "Quantity": "0",
+            "Orderamnt": "6600",
+            "Date": "2015-09-30"
+        }
+    ],
+    "attendance": [
+        {
+            "atid": "0",
+            "empCode": "MG-790",
+            "shiftCode": "",
+            "shiftprice": "",
+            "atyear": "2014",
+            "atmonth": "08",
+            "atdate": "20",
+            "startTime": "",
+            "colour": "#ff0000",
+            "endTime": "",
+            "pumps": ""
+        },
+        {
+            "atid": "13",
+            "empCode": "MG-790",
+            "shiftCode": "",
+            "shiftprice": "",
+            "atyear": "2015",
+            "atmonth": "08",
+            "atdate": "26",
+            "startTime": "",
+            "colour": "#ff0000",
+            "endTime": "",
+            "pumps": ""
+        },
+        {
+            "atid": "14",
+            "empCode": "MG-790",
+            "shiftCode": "",
+            "shiftprice": "",
+            "atyear": "2013",
+            "atmonth": "08",
+            "atdate": "25",
+            "startTime": "",
+            "colour": "#ff0000",
+            "endTime": "",
+            "pumps": ""
+        },
+        {
+            "atid": "16",
+            "empCode": "MG-789",
+            "shiftCode": "SH-147",
+            "shiftprice": "750",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "01",
+            "startTime": "03:00",
+            "colour": "orange",
+            "endTime": "",
+            "pumps": "SH-147"
+        },
+        {
+            "atid": "458",
+            "empCode": "MG-789",
+            "shiftCode": "SH-147",
+            "shiftprice": "750",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "03",
+            "startTime": "02:01",
+            "colour": "orange",
+            "endTime": "",
+            "pumps": "SH-147"
+        },
+        {
+            "atid": "459",
+            "empCode": "MG-789",
+            "shiftCode": "SH-725",
+            "shiftprice": "1500",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "04",
+            "startTime": "14:02",
+            "colour": "blue",
+            "endTime": "",
+            "pumps": "SH-725"
+        },
+        {
+            "atid": "461",
+            "empCode": "MG-790",
+            "shiftCode": "SH-147",
+            "shiftprice": "750",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "23",
+            "startTime": "03:00",
+            "colour": "orange",
+            "endTime": "",
+            "pumps": "SH-147"
+        },
+        {
+            "atid": "462",
+            "empCode": "MG-790",
+            "shiftCode": "",
+            "shiftprice": "",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "21",
+            "startTime": "",
+            "colour": "#ff0000",
+            "endTime": "",
+            "pumps": ""
+        },
+        {
+            "atid": "463",
+            "empCode": "MG-789",
+            "shiftCode": "SH-256",
+            "shiftprice": "1000",
+            "atyear": "2015",
+            "atmonth": "08",
+            "atdate": "02",
+            "startTime": "01:00",
+            "colour": "green",
+            "endTime": "",
+            "pumps": "SH-147"
+        },
+        {
+            "atid": "464",
+            "empCode": "MG-790",
+            "shiftCode": "",
+            "shiftprice": "",
+            "atyear": "2015",
+            "atmonth": "08",
+            "atdate": "24",
+            "startTime": "",
+            "colour": "#ff0000",
+            "endTime": "",
+            "pumps": ""
+        },
+        {
+            "atid": "465",
+            "empCode": "MG-789",
+            "shiftCode": "",
+            "shiftprice": "",
+            "atyear": "2015",
+            "atmonth": "08",
+            "atdate": "05",
+            "startTime": "",
+            "colour": "#ff0000",
+            "endTime": "",
+            "pumps": ""
+        },
+        {
+            "atid": "466",
+            "empCode": "MG-789",
+            "shiftCode": "",
+            "shiftprice": "",
+            "atyear": "2015",
+            "atmonth": "08",
+            "atdate": "06",
+            "startTime": "",
+            "colour": "#ff0000",
+            "endTime": "",
+            "pumps": ""
+        },
+        {
+            "atid": "467",
+            "empCode": "MG-789",
+            "shiftCode": "SH-147",
+            "shiftprice": "750",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "07",
+            "startTime": "02:00",
+            "colour": "orange",
+            "endTime": "",
+            "pumps": "SH-147"
+        },
+        {
+            "atid": "468",
+            "empCode": "MG-789",
+            "shiftCode": "",
+            "shiftprice": "",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "08",
+            "startTime": "",
+            "colour": "#ff0000",
+            "endTime": "",
+            "pumps": ""
+        },
+        {
+            "atid": "469",
+            "empCode": "MG-790",
+            "shiftCode": "",
+            "shiftprice": "",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "03",
+            "startTime": "",
+            "colour": "#ff0000",
+            "endTime": "",
+            "pumps": ""
+        },
+        {
+            "atid": "470",
+            "empCode": "MG-790",
+            "shiftCode": "",
+            "shiftprice": "",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "04",
+            "startTime": "",
+            "colour": "#ff0000",
+            "endTime": "",
+            "pumps": ""
+        },
+        {
+            "atid": "471",
+            "empCode": "MG-790",
+            "shiftCode": "",
+            "shiftprice": "",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "05",
+            "startTime": "",
+            "colour": "#ff0000",
+            "endTime": "",
+            "pumps": ""
+        },
+        {
+            "atid": "472",
+            "empCode": "MG-790",
+            "shiftCode": "SH-147",
+            "shiftprice": "750",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "13",
+            "startTime": "01:00",
+            "colour": "orange",
+            "endTime": "",
+            "pumps": "SH-147"
+        },
+        {
+            "atid": "473",
+            "empCode": "MG-790",
+            "shiftCode": "",
+            "shiftprice": "",
+            "atyear": "2015",
+            "atmonth": "08",
+            "atdate": "06",
+            "startTime": "",
+            "colour": "#ff0000",
+            "endTime": "",
+            "pumps": ""
+        },
+        {
+            "atid": "474",
+            "empCode": "MG-790",
+            "shiftCode": "SH-147",
+            "shiftprice": "750",
+            "atyear": "2015",
+            "atmonth": "08",
+            "atdate": "14",
+            "startTime": "01:00",
+            "colour": "orange",
+            "endTime": "",
+            "pumps": "SH-193"
+        },
+        {
+            "atid": "475",
+            "empCode": "MG-790",
+            "shiftCode": "SH-147",
+            "shiftprice": "750",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "15",
+            "startTime": "01:00",
+            "colour": "orange",
+            "endTime": "",
+            "pumps": "SH-193"
+        },
+        {
+            "atid": "476",
+            "empCode": "MG-790",
+            "shiftCode": "",
+            "shiftprice": "",
+            "atyear": "2015",
+            "atmonth": "08",
+            "atdate": "07",
+            "startTime": "",
+            "colour": "#ff0000",
+            "endTime": "",
+            "pumps": ""
+        },
+        {
+            "atid": "477",
+            "empCode": "MG-790",
+            "shiftCode": "",
+            "shiftprice": "",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "08",
+            "startTime": "",
+            "colour": "#ff0000",
+            "endTime": "",
+            "pumps": ""
+        },
+        {
+            "atid": "478",
+            "empCode": "MG-790",
+            "shiftCode": "SH-193",
+            "shiftprice": "500",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "16",
+            "startTime": "01:00",
+            "colour": "yellow",
+            "endTime": "",
+            "pumps": "SH-147"
+        },
+        {
+            "atid": "479",
+            "empCode": "MG-790",
+            "shiftCode": "",
+            "shiftprice": "",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "10",
+            "startTime": "",
+            "colour": "#ff0000",
+            "endTime": "",
+            "pumps": ""
+        },
+        {
+            "atid": "480",
+            "empCode": "MG-790",
+            "shiftCode": "",
+            "shiftprice": "",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "11",
+            "startTime": "",
+            "colour": "#ff0000",
+            "endTime": "",
+            "pumps": ""
+        },
+        {
+            "atid": "481",
+            "empCode": "MG-790",
+            "shiftCode": "SH-193",
+            "shiftprice": "500",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "18",
+            "startTime": "02:01",
+            "colour": "yellow",
+            "endTime": "12:57",
+            "pumps": "SH-147"
+        },
+        {
+            "atid": "482",
+            "empCode": "MG-790",
+            "shiftCode": "",
+            "shiftprice": "",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "12",
+            "startTime": "",
+            "colour": "#ff0000",
+            "endTime": "",
+            "pumps": ""
+        },
+        {
+            "atid": "483",
+            "empCode": "MG-790",
+            "shiftCode": "SH-193",
+            "shiftprice": "500",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "17",
+            "startTime": "18:01",
+            "colour": "yellow",
+            "endTime": "15:59",
+            "pumps": "SH-147"
+        },
+        {
+            "atid": "485",
+            "empCode": "MG-790",
+            "shiftCode": "",
+            "shiftprice": "",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "02",
+            "startTime": "",
+            "colour": "#ff0000",
+            "endTime": "",
+            "pumps": ""
+        },
+        {
+            "atid": "486",
+            "empCode": "MG-790",
+            "shiftCode": "",
+            "shiftprice": "",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "01",
+            "startTime": "",
+            "colour": "#ff0000",
+            "endTime": "",
+            "pumps": ""
+        },
+        {
+            "atid": "487",
+            "empCode": "MG-789",
+            "shiftCode": "SH-147",
+            "shiftprice": "750",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "29",
+            "startTime": "07:07",
+            "colour": "orange",
+            "endTime": "21:36",
+            "pumps": "1"
+        },
+        {
+            "atid": "488",
+            "empCode": "PM-237",
+            "shiftCode": "SH-147",
+            "shiftprice": "750",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "29",
+            "startTime": "05:55",
+            "colour": "orange",
+            "endTime": "21:38",
+            "pumps": "4"
+        },
+        {
+            "atid": "489",
+            "empCode": "MG-789",
+            "shiftCode": "SH-147",
+            "shiftprice": "750",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "30",
+            "startTime": "18:59",
+            "colour": "orange",
+            "endTime": "10:10",
+            "pumps": "1"
+        },
+        {
+            "atid": "490",
+            "empCode": "PM-406",
+            "shiftCode": "SH-147",
+            "shiftprice": "750",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "30",
+            "startTime": "23:13",
+            "colour": "orange",
+            "endTime": "10:08",
+            "pumps": "3"
+        },
+        {
+            "atid": "491",
+            "empCode": "MG-790",
+            "shiftCode": "SH-147",
+            "shiftprice": "750",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "30",
+            "startTime": "12:31",
+            "colour": "orange",
+            "endTime": "10:11",
+            "pumps": "3"
+        },
+        {
+            "atid": "493",
+            "empCode": "PM-237",
+            "shiftCode": "SH-193",
+            "shiftprice": "2000",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "30",
+            "startTime": "02:00",
+            "colour": "yellow",
+            "endTime": "",
+            "pumps": "4"
+        },
+        {
+            "atid": "494",
+            "empCode": "PM-168",
+            "shiftCode": "",
+            "shiftprice": "",
+            "atyear": "2015",
+            "atmonth": "09",
+            "atdate": "30",
+            "startTime": "",
+            "colour": "#ff0000",
+            "endTime": "",
+            "pumps": ""
+        }
+    ]
+}
