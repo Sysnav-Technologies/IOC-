@@ -6,14 +6,12 @@
 		// Include paths for standalone login page
 		require_once __DIR__ . '/../../config/paths.php';
 	?>
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Include roboto.css to use the Roboto web font, material.css to include the theme and ripples.css to style the ripple effect -->
-    <link href="<?php echo CSS ?>dist/css/roboto.min.css" rel="stylesheet">
-    <link href="<?php echo CSS ?>dist/css/material.min.css" rel="stylesheet">
-    <link href="<?php echo CSS ?>dist/css/ripples.min.css" rel="stylesheet">
+	<link href="<?php echo URL ?>assets/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design CSS -->
+    <link href="<?php echo URL ?>assets/css/material.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="<?php echo CSS1 ?>login.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo CSS ?>login/css/index.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo URL ?>assets/css/login.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo URL ?>views/login/css/index.css">
 </head>
 <body>
 <!--	<form class="form-horizontal" method="post" action="login/checkin">
@@ -57,7 +55,7 @@
    <div class="box">
 
       <div class="title">LOGIN</div>
-      <form action="login/checkin" method="post">
+      <form action="<?php echo URL ?>login/checkin" method="post">
       <div class="input">
          <label for="name">Username</label>
          <input type="text" name="username" id="name">
@@ -81,11 +79,11 @@
    
 
 </div>
-	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="<?php echo URL ?>assets/js/jquery.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/bootstrap.min.js"></script>
 
-        <script src="<?php echo CSS ?>dist/js/ripples.min.js"></script>
-        <script src="<?php echo CSS ?>dist/js/material.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/ripples.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/material.min.js"></script>
         <script>
             $(document).ready(function() {
                 // Check if jQuery is loaded
