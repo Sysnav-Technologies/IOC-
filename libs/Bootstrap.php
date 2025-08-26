@@ -11,6 +11,14 @@
 			
 			//if empty redirect to index
 			if(empty($url[0])){	
+				// Check authentication before loading index
+				Session::init();
+				if(!isset($_SESSION['loggedIn'])){
+					require 'controllers/login.php';
+					$controller = new Login();
+					$controller->index();
+					return;
+				}
 				require 'controllers/index.php';
 				$controller = new Index();
 				$controller->index();

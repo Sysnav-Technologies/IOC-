@@ -9,7 +9,7 @@ class Assets extends Controller
     
     public function index()
      {
-        
+        $this->requireAuth();
         $this->view->render('assets/index',false);
         
         

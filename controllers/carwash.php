@@ -9,6 +9,7 @@ class Carwash extends Controller {
     }
 
     public function index() {
+        $this->requireAuth();
         $this->view->render('carwash/index', false);
     }
 

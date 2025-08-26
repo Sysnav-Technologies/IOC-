@@ -1,15 +1,9 @@
 <?php
-	// Auto-detect environment
-	$isLocal = ($_SERVER['HTTP_HOST'] === 'localhost' || $_SERVER['HTTP_HOST'] === '127.0.0.1');
+	// Include cPanel helper
+	require_once __DIR__ . '/CPanelHelper.php';
 	
-	if ($isLocal) {
-		// Local environment - include /IOC/ in path
-		$baseUrl = 'http://localhost/IOC/';
-	} else {
-		// Production environment - domain root
-		$protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
-		$baseUrl = $protocol . '://' . $_SERVER['HTTP_HOST'] . '/';
-	}
+	// Use cPanel helper for better environment detection
+	$baseUrl = CPanelHelper::getBaseURL();
 	
 	define('URL', $baseUrl);
 	define('CSS', $baseUrl . 'views/');

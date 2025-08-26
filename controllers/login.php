@@ -15,15 +15,6 @@
 		public function login(){
 
 		}
-		public static function isLoggedIn(){
-			Session::init();
-			if(isset($_SESSION['loggedIn'])){
-				return true;
-			}
-			else{
-				return false;
-			}
-		}
 		public function checkin(){
 			if(isset($_POST['username']) && isset($_POST['password'])){
 				$username = $_POST['username'];

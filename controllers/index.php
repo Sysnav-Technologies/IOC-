@@ -4,6 +4,8 @@
 			parent::__construct();
 		}
 		public function index(){
+			// Check if user is logged in, if not redirect to login
+			$this->requireAuth();
 			$this->view->render('index/index',true);
 		}
 		public function logout(){
@@ -11,9 +13,12 @@
 			if(isset($_SESSION['loggedIn'])){
 				Session::destroy();
 				header('location:'.URL.'login');
+				exit;
 			}
 			else{
-				echo "Oops something went wrong";
+				// Instead of showing error, redirect to login
+				header('location:'.URL.'login');
+				exit;
 			}
 		}
 		public function signUp(){
