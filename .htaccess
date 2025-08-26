@@ -1,8 +1,12 @@
 # IOC Simple Routing - Static files handled by serve-static.php
 RewriteEngine On
 
-# Only route URLs that don't match actual files or directories
+# Allow access to static files directly
+RewriteRule ^assets/ - [L]
+RewriteRule ^views/ - [L]
+RewriteRule ^bower_components/ - [L]
+
+# Route everything else to index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !^/serve-static\.php
-RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+RewriteRule ^(.*)$ index.php [QSA,L]
