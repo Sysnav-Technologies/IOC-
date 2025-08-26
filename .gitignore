@@ -4,8 +4,7 @@
 .env.production
 
 # Database configuration
-libs/Database.php
-config/database.php
+# config/database.php (only ignore if it contains sensitive data)
 
 # SQL dumps and backups
 # *.sql
