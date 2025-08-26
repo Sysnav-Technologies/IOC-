@@ -1,30 +1,17 @@
-# IOC cPanel Compatible .htaccess
+# Simple .htaccess for cPanel hosting
 RewriteEngine On
 
-# Prevent rewriting for asset directories - be very explicit
-RewriteRule ^bower_components/ - [L,NC]
-RewriteRule ^views/dist/ - [L,NC]
-RewriteRule ^views/css/ - [L,NC]
-RewriteRule ^views/img/ - [L,NC]
-RewriteRule ^views/js/ - [L,NC]
-RewriteRule ^node_modules/ - [L,NC]
+# Block rewriting for static asset directories completely
+RewriteRule ^bower_components/ - [L]
+RewriteRule ^views/css/ - [L]
+RewriteRule ^views/img/ - [L]
+RewriteRule ^views/js/ - [L]
+RewriteRule ^node_modules/ - [L]
 
-# Prevent rewriting for file extensions - be very explicit
-RewriteRule \.js$ - [L,NC]
-RewriteRule \.css$ - [L,NC]
-RewriteRule \.png$ - [L,NC]
-RewriteRule \.jpg$ - [L,NC]
-RewriteRule \.jpeg$ - [L,NC]
-RewriteRule \.gif$ - [L,NC]
-RewriteRule \.ico$ - [L,NC]
-RewriteRule \.svg$ - [L,NC]
-RewriteRule \.woff$ - [L,NC]
-RewriteRule \.woff2$ - [L,NC]
-RewriteRule \.ttf$ - [L,NC]
-RewriteRule \.eot$ - [L,NC]
-RewriteRule \.map$ - [L,NC]
+# Block rewriting for common file extensions
+RewriteRule \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|map|txt)$ - [L]
 
-# Only route actual URLs through index.php
+# Route everything else to index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
