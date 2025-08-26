@@ -58,14 +58,29 @@
 
 <script type="text/javascript">
 	$(document).ready(function(){
-		$.getJSON('profile/loadProfileCode',function(data){
-			console.log(data);
-			//firstname = data[0].firstName;
-			//lastname = data[0].lastName;
-		});
-		//$("#username").append(firstname + lastname);
+		// Use buildUrl to ensure correct URL generation
+		var profileUrl = buildUrl('profile/loadProfileCode');
+		console.log('Loading profile data from:', profileUrl);
+		
+		$.getJSON(profileUrl)
+			.done(function(data) {
+				console.log('Profile data loaded successfully:', data);
+				// The profile data is already displayed in the PHP section above
+				// This AJAX call was likely for additional dynamic content
+				// For now, we can remove the loading spinner
+				$('#spinner').empty();
+			})
+			.fail(function(jqXHR, textStatus, errorThrown) {
+				console.error('Failed to load profile data:', textStatus, errorThrown);
+				console.error('Response:', jqXHR.responseText);
+				// Remove loading spinner on error
+				$('#spinner').empty();
+				// Optionally show an error message
+				if (jqXHR.responseJSON && jqXHR.responseJSON.error) {
+					console.error('Server error:', jqXHR.responseJSON.error);
+				}
+			});
 	});
-
 </script>
 
 
