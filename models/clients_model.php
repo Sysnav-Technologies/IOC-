@@ -104,7 +104,7 @@
         public function  sendemail($email,$user,$subject,$body)
         {
               
-        require_once '/libs/email/PHPMailer/PHPMailerAutoload.php';
+        require_once 'libs/email/PHPMailer/PHPMailerAutoload.php';
         $mail = new PHPMailer;
     //$mail->SMTPDebug = 1;                               // Enable verbose debug output
         $mail->isSMTP();                                      // Set mailer to use SMTP

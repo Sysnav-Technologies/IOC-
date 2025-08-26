@@ -272,7 +272,7 @@ class Carwash_model extends Model {
 
     //MAIL SENDER
     public function SendMail($email, $user) {
-        require_once '/libs/email/PHPMailer/PHPMailerAutoload.php';
+        require_once 'libs/email/PHPMailer/PHPMailerAutoload.php';
 
 
         $mail = new PHPMailer;

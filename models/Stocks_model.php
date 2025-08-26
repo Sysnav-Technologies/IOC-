@@ -337,7 +337,7 @@
         	return $avgReading;
         }
         public function SendMail($email, $message) {
-        require_once '/libs/email/PHPMailer/PHPMailerAutoload.php';
+        require_once 'libs/email/PHPMailer/PHPMailerAutoload.php';
 
 
         $mail = new PHPMailer;
