@@ -1,13 +1,30 @@
+# IOC cPanel Compatible .htaccess
 RewriteEngine On
 
-# Allow direct access to static files
-RewriteCond %{REQUEST_FILENAME} -f
-RewriteRule \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ - [L]
+# Prevent rewriting for asset directories - be very explicit
+RewriteRule ^bower_components/ - [L,NC]
+RewriteRule ^views/dist/ - [L,NC]
+RewriteRule ^views/css/ - [L,NC]
+RewriteRule ^views/img/ - [L,NC]
+RewriteRule ^views/js/ - [L,NC]
+RewriteRule ^node_modules/ - [L,NC]
 
-# Allow direct access to bower_components and other asset directories
-RewriteRule ^(bower_components|views|node_modules)/ - [L]
+# Prevent rewriting for file extensions - be very explicit
+RewriteRule \.js$ - [L,NC]
+RewriteRule \.css$ - [L,NC]
+RewriteRule \.png$ - [L,NC]
+RewriteRule \.jpg$ - [L,NC]
+RewriteRule \.jpeg$ - [L,NC]
+RewriteRule \.gif$ - [L,NC]
+RewriteRule \.ico$ - [L,NC]
+RewriteRule \.svg$ - [L,NC]
+RewriteRule \.woff$ - [L,NC]
+RewriteRule \.woff2$ - [L,NC]
+RewriteRule \.ttf$ - [L,NC]
+RewriteRule \.eot$ - [L,NC]
+RewriteRule \.map$ - [L,NC]
 
-# Route everything else through index.php
+# Only route actual URLs through index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]

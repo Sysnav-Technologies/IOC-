@@ -1,0 +1,17 @@
+# Simple .htaccess for cPanel hosting
+RewriteEngine On
+
+# Block rewriting for static asset directories completely
+RewriteRule ^bower_components/ - [L]
+RewriteRule ^views/css/ - [L]
+RewriteRule ^views/img/ - [L]
+RewriteRule ^views/js/ - [L]
+RewriteRule ^node_modules/ - [L]
+
+# Block rewriting for common file extensions
+RewriteRule \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|map|txt)$ - [L]
+
+# Route everything else to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
