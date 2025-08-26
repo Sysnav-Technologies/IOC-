@@ -4,21 +4,34 @@
 	
 	class Bootstrap{
 		function __construct(){
+			// Debug logging for cPanel troubleshooting
+			$logFile = __DIR__ . '/../debug_cpanel.log';
+			$timestamp = date('Y-m-d H:i:s');
+			
+			file_put_contents($logFile, "\n[$timestamp] Bootstrap->__construct() called", FILE_APPEND);
+			file_put_contents($logFile, "\n[$timestamp] GET parameters: " . print_r($_GET, true), FILE_APPEND);
+			file_put_contents($logFile, "\n[$timestamp] SERVER REQUEST_URI: " . $_SERVER['REQUEST_URI'], FILE_APPEND);
+			
 			// Initialize Currency Helper
 			CurrencyHelper::init();
 			$url = isset($_GET['url']) ? $_GET['url'] : '';
 			$url = explode('/', $url);
 			
+			file_put_contents($logFile, "\n[$timestamp] URL array: " . print_r($url, true), FILE_APPEND);
+			
 			//if empty redirect to index
 			if(empty($url[0])){	
+				file_put_contents($logFile, "\n[$timestamp] Empty URL, checking authentication", FILE_APPEND);
 				// Check authentication before loading index
 				Session::init();
 				if(!isset($_SESSION['loggedIn'])){
+					file_put_contents($logFile, "\n[$timestamp] Not logged in, loading login controller", FILE_APPEND);
 					require __DIR__ . '/../controllers/login.php';
 					$controller = new Login();
 					$controller->index();
 					return;
 				}
+				file_put_contents($logFile, "\n[$timestamp] Logged in, loading index controller", FILE_APPEND);
 				require __DIR__ . '/../controllers/index.php';
 				$controller = new Index();
 				$controller->index();

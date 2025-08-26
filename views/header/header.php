@@ -121,74 +121,63 @@ if (isset($_SESSION['loggedIn'])) {
                 });
 
                 $(window).ready(function () {
+                    // Disable automatic AJAX loading for traditional MVC routing
+                    // The dashboard and other modules will load through normal page navigation
                     var hash = window.location.hash;
-                    $('#loader').empty();
-                    $('#spinner').load(buildUrl('views/css/header/spinkit.html'));
-                    var len = hash.length;
-                    hash = hash.substring(2, len);
-                    console.log('Hash value' + hash);
-                    if (hash == "") {
-                        // setTimeout(function(){
-                        //     console.log('timeout');
-
-                        //     $('#spinner').empty();  
-
-                        //         $('#loader').load(buildUrl(''), function(){
-                        //             fadeIN();
-                        //             window.location.hash = "/";
-                        //             console.log('Success !');
-                        //         });   
-
-                        // },1000);
-                        return false;
-                    }
-                    console.log(hash);
-                    setTimeout(function () {
-                        console.log('timeout');
-
-                        $('#spinner').empty();
-                        $('#subloader').empty();
-                        console.log('YUP ! ' + hashCheck(hash)[0]);
+                    
+                    // Only process hash if it's not empty and we're actually using hash-based navigation
+                    if (hash && hash.length > 2) {
+                        $('#loader').empty();
+                        $('#spinner').load(buildUrl('views/css/header/spinkit.html'));
+                        var len = hash.length;
+                        hash = hash.substring(2, len);
+                        console.log('Hash value' + hash);
                         
-                        function handleInitialError() {
+                        setTimeout(function () {
+                            console.log('timeout');
+
                             $('#spinner').empty();
-                            $('#loader').html('<div class="alert alert-danger">Failed to load initial content. Please refresh the page.</div>');
-                            fadeIN();
-                        }
-                        
-                        if (hashCheck(hash)[1]) {
-                            $('#loader').load(buildUrl(hashCheck(hash)[0]), function (response, status, xhr) {
-                                if (status == "error") {
-                                    handleInitialError();
-                                } else {
-                                    fadeIN();
-                                    //        window.location.hash = "/" + hash;
-                                    console.log('Success !');
-                                }
-                            });
-                            $('#subloader').load(buildUrl('stocks/' + hashCheck(hash)[1]), function (response, status, xhr) {
-                                if (status == "error") {
-                                    $('#subloader').html('<div class="alert alert-warning">Failed to load sub-content.</div>');
-                                } else {
-                                    //console.log('morning_stock !');
-                                    $('#subloader').hide();
-                                    $('#subloader').fadeIn('slow');
-                                }
-                            });
-                        }
-                        else {
-                            $('#loader').load(buildUrl(hash), function (response, status, xhr) {
-                                if (status == "error") {
-                                    handleInitialError();
-                                } else {
-                                    fadeIN();
-                                    window.location.hash = "/" + hash;
-                                    console.log('Success !');
-                                }
-                            });
-                        }
+                            $('#subloader').empty();
+                            console.log('YUP ! ' + hashCheck(hash)[0]);
+                            
+                            function handleInitialError() {
+                                $('#spinner').empty();
+                                $('#loader').html('<div class="alert alert-danger">Failed to load initial content. Please refresh the page.</div>');
+                                fadeIN();
+                            }
+                            
+                            if (hashCheck(hash)[1]) {
+                                $('#loader').load(buildUrl(hashCheck(hash)[0]), function (response, status, xhr) {
+                                    if (status == "error") {
+                                        handleInitialError();
+                                    } else {
+                                        fadeIN();
+                                        console.log('Success !');
+                                    }
+                                });
+                                $('#subloader').load(buildUrl('stocks/' + hashCheck(hash)[1]), function (response, status, xhr) {
+                                    if (status == "error") {
+                                        $('#subloader').html('<div class="alert alert-warning">Failed to load sub-content.</div>');
+                                    } else {
+                                        $('#subloader').hide();
+                                        $('#subloader').fadeIn('slow');
+                                    }
+                                });
+                            }
+                            else {
+                                $('#loader').load(buildUrl(hash), function (response, status, xhr) {
+                                    if (status == "error") {
+                                        handleInitialError();
+                                    } else {
+                                        fadeIN();
+                                        window.location.hash = "/" + hash;
+                                        console.log('Success !');
+                                    }
+                                });
+                            }
 
-                    }, 1000);
+                        }, 1000);
+                    }
 
                     return false;
                 });
