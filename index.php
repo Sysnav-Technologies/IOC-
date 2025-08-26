@@ -1,4 +1,8 @@
 <?php 
+	// Load configuration first
+	require 'config/Config.php';
+	Config::loadEnv();
+	
 	//Libraries
 	require 'libs/Bootstrap.php';
 	require 'libs/Controller.php';
