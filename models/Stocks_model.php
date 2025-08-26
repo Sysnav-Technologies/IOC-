@@ -356,7 +356,7 @@
         $mail->FromName = $mailConfig['from_name'];
         $mail->addAddress($email, $email);     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
-        $mail->addReplyTo('ioc.negambo@gmail.com', 'IOC');
+        $mail->addReplyTo($mailConfig['username'], $mailConfig['from_name']);
 //$mail->addCC('cc@example.com');
         $mail->addBCC('bcc@example.com');
 //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments

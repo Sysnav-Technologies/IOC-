@@ -69,4 +69,23 @@ class Config {
             'api_secret' => isset($_ENV['SMS_API_SECRET']) ? $_ENV['SMS_API_SECRET'] : '4ba994ca'
         ];
     }
+    
+    /**
+     * Configure PHPMailer instance with environment settings
+     * @param PHPMailer $mail
+     */
+    public static function configurePHPMailer($mail) {
+        $config = self::getMailConfig();
+        
+        $mail->isSMTP();
+        $mail->Host = $config['host'];
+        $mail->SMTPAuth = true;
+        $mail->Username = $config['username'];
+        $mail->Password = $config['password'];
+        $mail->SMTPSecure = $config['encryption'];
+        $mail->Port = $config['port'];
+        $mail->From = $config['from_address'];
+        $mail->FromName = $config['from_name'];
+        $mail->addReplyTo($config['username'], $config['from_name']);
+    }
 }

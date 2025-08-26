@@ -91,24 +91,13 @@ class Assets_model extends Model{
           public function  sendemail($email,$user,$subject,$body)
         {
               require_once __DIR__ . '/../config/Config.php';
-              $mailConfig = Config::getMailConfig();
+              require_once 'libs/email/PHPMailer/PHPMailerAutoload.php';
               
-               require_once 'libs/email/PHPMailer/PHPMailerAutoload.php';
         $mail = new PHPMailer;
     //$mail->SMTPDebug = 1;                               // Enable verbose debug output
-        $mail->isSMTP();                                      // Set mailer to use SMTP
-        $mail->Host = $mailConfig['host'];
-        $mail->SMTPAuth = true;                               // Enable SMTP authentication
-        $mail->Username = $mailConfig['username'];
-        $mail->Password = $mailConfig['password'];
-        $mail->SMTPSecure = $mailConfig['encryption'];
-        $mail->Port = $mailConfig['port'];
-
-        $mail->From = $mailConfig['from_address'];
-        $mail->FromName = $mailConfig['from_name'];
+        Config::configurePHPMailer($mail);
        $mail->addAddress($email, $user);   // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
-        $mail->addReplyTo('ioc.negambo@gmail.com', 'IOC');
 //$mail->addCC('cc@example.com');
         $mail->addBCC('bcc@example.com');
 //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
