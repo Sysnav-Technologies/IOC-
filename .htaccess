@@ -1,10 +1,20 @@
 # IOC Simple Routing - Static files handled by serve-static.php
 RewriteEngine On
 
-# Allow access to static files directly
+# Enable error pages for debugging (remove in production)
+# ErrorDocument 404 /404.html
+
+# Allow direct access to static files and directories
 RewriteRule ^assets/ - [L]
 RewriteRule ^views/ - [L]
 RewriteRule ^bower_components/ - [L]
+RewriteRule ^libs/ - [L]
+
+# Handle missing static files gracefully
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} \.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ [NC]
+RewriteRule ^ - [R=404,L]
 
 # Route everything else to index.php
 RewriteCond %{REQUEST_FILENAME} !-f

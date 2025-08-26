@@ -38,15 +38,23 @@ class CPanelHelper {
     public static function getBaseURL() {
         $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
         
-        // Get the directory from REQUEST_URI or SCRIPT_NAME
+        // Check if we're on localhost (development)
+        if ($_SERVER['HTTP_HOST'] === 'localhost' || 
+            $_SERVER['HTTP_HOST'] === '127.0.0.1' || 
+            strpos($_SERVER['HTTP_HOST'], ':') !== false) {
+            // Development environment - include /IOC/
+            return $protocol . '://' . $_SERVER['HTTP_HOST'] . '/IOC/';
+        }
+        
+        // Production cPanel environment - auto-detect path
         $scriptPath = $_SERVER['SCRIPT_NAME'] ?? '';
-        $basePath = '/IOC'; // Default for this deployment
+        $basePath = '/';
         
         // Extract directory path from script path
         if (strpos($scriptPath, 'index.php') !== false) {
             $detectedPath = dirname($scriptPath);
             if ($detectedPath !== '.' && $detectedPath !== '/') {
-                $basePath = $detectedPath;
+                $basePath = $detectedPath . '/';
             }
         }
         
