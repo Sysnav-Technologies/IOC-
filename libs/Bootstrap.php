@@ -60,10 +60,14 @@
 			} 
 			$file = __DIR__ . '/../controllers/'. $url[0] .'.php';
 			
+			file_put_contents($logFile, "\n[$timestamp] Looking for controller file: " . $file, FILE_APPEND);
+			
 			if(file_exists($file)){
+				file_put_contents($logFile, "\n[$timestamp] Controller file exists, requiring it", FILE_APPEND);
 				require $file;
 				// Handle case sensitivity - capitalize first letter for class name
 				$className = ucfirst($url[0]);
+				file_put_contents($logFile, "\n[$timestamp] Creating controller instance: " . $className, FILE_APPEND);
 				$controller = new $className();
 				
 				// Ensure $url[1] is a string, not an array
@@ -93,10 +97,12 @@
 					}	
 				}
 				else{
+					file_put_contents($logFile, "\n[$timestamp] No method specified, calling index()", FILE_APPEND);
 					$controller->index();
 				}	
 			}
 			else{
+				file_put_contents($logFile, "\n[$timestamp] Controller file not found: " . $file, FILE_APPEND);
 				require_once __DIR__ . '/../controllers/error.php';
 				$controller = new IOC_ErrorController();
 				$controller->index();

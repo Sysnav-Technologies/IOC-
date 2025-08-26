@@ -9,9 +9,16 @@ class Assets extends Controller
     
     public function index()
      {
-        $this->requireAuth();
-        $this->view->render('assets/index',false);
+        // Debug logging
+        $logFile = __DIR__ . '/../debug_cpanel.log';
+        $timestamp = date('Y-m-d H:i:s');
+        file_put_contents($logFile, "\n[$timestamp] Assets->index() called", FILE_APPEND);
         
+        $this->requireAuth();
+        
+        file_put_contents($logFile, "\n[$timestamp] Assets->index() auth passed, rendering view", FILE_APPEND);
+        $this->view->render('assets/index',false);
+        file_put_contents($logFile, "\n[$timestamp] Assets->index() view rendered", FILE_APPEND);
         
      } 
      public function equipments(){
