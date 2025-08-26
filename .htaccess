@@ -1,4 +1,13 @@
 RewriteEngine On
+
+# Allow direct access to static files
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ - [L]
+
+# Allow direct access to bower_components and other asset directories
+RewriteRule ^(bower_components|views|node_modules)/ - [L]
+
+# Route everything else through index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]

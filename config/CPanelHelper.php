@@ -38,11 +38,23 @@ class CPanelHelper {
     public static function getBaseURL() {
         $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
         
-        if (self::isCPanel()) {
-            return $protocol . '://' . $_SERVER['HTTP_HOST'] . '/';
-        } else {
-            return $protocol . '://' . $_SERVER['HTTP_HOST'] . '/IOC/';
+        // Get the directory from REQUEST_URI or SCRIPT_NAME
+        $scriptPath = $_SERVER['SCRIPT_NAME'] ?? '';
+        $basePath = '/IOC'; // Default for this deployment
+        
+        // Extract directory path from script path
+        if (strpos($scriptPath, 'index.php') !== false) {
+            $detectedPath = dirname($scriptPath);
+            if ($detectedPath !== '.' && $detectedPath !== '/') {
+                $basePath = $detectedPath;
+            }
         }
+        
+        // Ensure proper format
+        $basePath = rtrim($basePath, '/') . '/';
+        if ($basePath === '//') $basePath = '/';
+        
+        return $protocol . '://' . $_SERVER['HTTP_HOST'] . $basePath;
     }
     
     /**

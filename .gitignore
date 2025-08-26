@@ -14,8 +14,8 @@
 
 # Dependencies
 # /bower_components/ (removed - needed for frontend)
-/node_modules/
-/vendor/
+# /node_modules/
+# /vendor/
 
 # IDE and editor files
 /nbproject/
