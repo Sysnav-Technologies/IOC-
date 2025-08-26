@@ -73,11 +73,14 @@
 				// Ensure $url[1] is a string, not an array
 				if(isset($url[1]) && !is_array($url[1]) && $url[1] != ""){
 					$method = $url[1];
+					file_put_contents($logFile, "\n[$timestamp] Method specified: " . $method, FILE_APPEND);
 					if(isset($url[2]) && !is_array($url[2]) && $url[2] != ""){			
 						if(method_exists($controller, $method)){
+							file_put_contents($logFile, "\n[$timestamp] Calling method " . $method . " with parameter", FILE_APPEND);
 							$controller->$method($url[2]);
 						}
 						else{
+							file_put_contents($logFile, "\n[$timestamp] Method " . $method . " does not exist", FILE_APPEND);
 							require_once __DIR__ . '/../controllers/error.php';
 							$controller = new IOC_ErrorController();
 							$controller->index();
@@ -86,9 +89,11 @@
 					}
 					else{
 						if(method_exists($controller, $method)){
+							file_put_contents($logFile, "\n[$timestamp] Calling method " . $method . " without parameter", FILE_APPEND);
 							$controller->$method();
 						}
 						else{
+							file_put_contents($logFile, "\n[$timestamp] Method " . $method . " does not exist", FILE_APPEND);
 							require_once __DIR__ . '/../controllers/error.php';
 							$controller = new IOC_ErrorController();
 							$controller->index();
