@@ -11,7 +11,7 @@
 	require __DIR__ . '/libs/Session.php';	
 	//configuration files
 	require __DIR__ . '/config/paths.php';
-	require __DIR__ . '/config/Database.php';
+	require __DIR__ . '/libs/Database.php';
 	
 	$app  = new Bootstrap();
 ?>
