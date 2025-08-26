@@ -91,13 +91,13 @@
                         else if (y == len2 - 1)
                         {
                             $('#loadnotwork').append(
-                                    $('<li id="' + x + '" ></li>').val(x).html(data[x].firstName + " " + data[x].lastName +" - "+data[x].emptype+ '<p align="right"><a href="' + data[x].employeeCode + '"  class="edit" >Mark As Absence</a></p>'));
+                                    $('<li id="' + x + '" ></li>').val(x).html(data[x].firstName + " " + data[x].lastName +" - "+data[x].emptype+ '<p align="right"><a href="#" data-employee-code="' + data[x].employeeCode + '"  class="edit" >Mark As Absence</a></p>'));
                         }
                     }
                 }
 
                 $('.edit').click(function (e) {
-                    var id = $(this).attr('href');
+                    var id = $(this).data('employee-code');
                     var currentTime = new Date();
                     var yearr=currentTime.getFullYear();
                     var monthh=currentTime.getMonth()+1;

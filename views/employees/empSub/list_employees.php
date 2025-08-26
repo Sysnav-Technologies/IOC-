@@ -27,6 +27,8 @@
     </fieldset>
 </form>
 
+<!-- Test button for modal -->
+<button type="button" class="btn btn-primary" onclick="$('#myModal').modal('show');">Test Modal</button>
 
 <table class="table table-striped table-hover ">
     <col style="width:10%">
@@ -228,13 +230,15 @@
                 $("." + x + "").append('<td id="' + data[x].employeeCode + "-empname" + '">' + data[x].firstName + " " + data[x].lastName + '</td>');
                 $("." + x + "").append('<td id="' + "-emp" + '">' + '</td>');
                 $("." + x + "").append('<td class="hide" id="' + data[x].employeeCode + "-empme" + '">' + x + '</td>');
-                $("." + x + "").append('<td><div class="icon-preview"><a href="' + data[x].employeeCode + '" class="edit"><i class="mdi-content-create"></i></a></div></td>');
-                $("." + x + "").append('<td><div class="icon-preview"><a href="' + data[x].employeeCode + '" class="remove"><i class="mdi-content-remove-circle"></i></a></div></td>');
+                $("." + x + "").append('<td><div class="icon-preview"><a href="#" data-employee-code="' + data[x].employeeCode + '" class="edit"><i class="mdi-content-create"></i></a></div></td>');
+                $("." + x + "").append('<td><div class="icon-preview"><a href="#" data-employee-code="' + data[x].employeeCode + '" class="remove"><i class="mdi-content-remove-circle"></i></a></div></td>');
                 $("." + x + "").append('</tr>');
             }
 
-            $('.remove').click(function (e) {
-                var id = $(this).attr('href');
+            // Use event delegation for dynamically created elements
+            $(document).on('click', '.remove', function (e) {
+                e.preventDefault();
+                var id = $(this).data('employee-code');
 
                 swal({title: "Are you sure?",
                     text: "You will not be able to recover this Employee!",
@@ -269,12 +273,17 @@
                 return false;
             });
 
-            $('.edit').click(function (e) {
-                var id = $(this).attr('href');
+            // Use event delegation for dynamically created elements
+            $(document).on('click', '.edit', function (e) {
+                e.preventDefault();
+                var id = $(this).data('employee-code');
+                console.log('Edit clicked for employee:', id); // Debug log
 
                 $('#myModal').modal('show');
                 setTimeout(function () {
                     var mycode = $('#' + id + '-empme').text();
+                    console.log('Employee index:', mycode); // Debug log
+                    console.log('Employee data:', data[mycode]); // Debug log
 //assing values
                     $('#autocode').val(data[mycode].employeeCode);
                     $('#fname').val(data[mycode].firstName);
@@ -340,7 +349,6 @@
 </script>
 
 
-    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
     <script type="text/javascript">
                function submitForm() {
                
