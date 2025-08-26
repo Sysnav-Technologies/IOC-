@@ -27,9 +27,6 @@
     </fieldset>
 </form>
 
-<!-- Test button for modal -->
-<button type="button" class="btn btn-primary" onclick="$('#myModal').modal('show');">Test Modal</button>
-
 <table class="table table-striped table-hover ">
     <col style="width:10%">
     <col style="width:15%">

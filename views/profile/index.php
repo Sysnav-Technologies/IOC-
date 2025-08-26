@@ -6,29 +6,38 @@
 
 		<?php
 			//Session::init();
-			$employeeName = $_SESSION['loggedIn'];
-			require 'models/Login_model.php';
-			$model = new Login_model();
-			$empCodeData = $model->getEmployeeCode($employeeName);
+			Session::init();
 			
-			if (!empty($empCodeData) && isset($empCodeData[0][0])) {
-				$empCode = $empCodeData[0][0];
-				$data = $model->loadProfileDetails($empCode);
-				
-				if (!empty($data) && isset($data[0])) {
-					echo "<h3>" . (isset($data[0][1]) ? $data[0][1] : '') . " " . (isset($data[0][2]) ? $data[0][2] : '') . "</h3>";
-					echo "<b> Type : " . (isset($data[0][8]) ? $data[0][8] : 'N/A') . "</b><br/>"; 			
-					echo "<b> NIC : " . (isset($data[0][4]) ? $data[0][4] : 'N/A') . "</b><br/>"; 			
-					echo "<b> Birthday : " . (isset($data[0][6]) ? $data[0][6] : 'N/A') . "</b><br/>";
-				} else {
-					echo "<h3>Profile not found</h3>";
-					echo "<b>Employee Code: " . htmlspecialchars($empCode) . "</b><br/>";
-					echo "<b>No profile details available.</b>";
-				}
+			// Check if user is logged in
+			if (!isset($_SESSION['loggedIn']) || empty($_SESSION['loggedIn'])) {
+				echo "<h3>Not logged in</h3>";
+				echo "<b>Please log in to view your profile.</b>";
+				echo '<br/><a href="' . URL . 'login" class="btn btn-primary">Login</a>';
 			} else {
-				echo "<h3>Employee not found</h3>";
-				echo "<b>Username: " . htmlspecialchars($employeeName) . "</b><br/>";
-				echo "<b>Please contact administrator.</b>";
+				$employeeName = $_SESSION['loggedIn'];
+				require 'models/Login_model.php';
+				$model = new Login_model();
+				$empCodeData = $model->getEmployeeCode($employeeName);
+				
+				if (!empty($empCodeData) && isset($empCodeData[0]['employeeCode'])) {
+					$empCode = $empCodeData[0]['employeeCode'];
+					$data = $model->loadProfileDetails($empCode);
+					
+					if (!empty($data) && isset($data[0])) {
+						echo "<h3>" . (isset($data[0]['firstName']) ? $data[0]['firstName'] : '') . " " . (isset($data[0]['lastName']) ? $data[0]['lastName'] : '') . "</h3>";
+						echo "<b> Type : " . (isset($data[0]['emptype']) ? $data[0]['emptype'] : 'N/A') . "</b><br/>"; 			
+						echo "<b> NIC : " . (isset($data[0]['nicNumber']) ? $data[0]['nicNumber'] : 'N/A') . "</b><br/>"; 			
+						echo "<b> Birthday : " . (isset($data[0]['birthDate']) ? $data[0]['birthDate'] : 'N/A') . "</b><br/>";
+					} else {
+						echo "<h3>Profile not found</h3>";
+						echo "<b>Employee Code: " . htmlspecialchars($empCode) . "</b><br/>";
+						echo "<b>No profile details available.</b>";
+					}
+				} else {
+					echo "<h3>Employee not found</h3>";
+					echo "<b>Username: " . htmlspecialchars($employeeName) . "</b><br/>";
+					echo "<b>Please contact administrator.</b>";
+				}
 			}
 		?>
 	</div>

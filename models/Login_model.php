@@ -55,12 +55,12 @@
 		}
 	}
 	public function loadProfileDetails($employeeCode){
-			$st = $this->db->prepare("SELECT * FROM employee_list WHERE employeeCode=:empCode");
-			$st->execute(array(
-				':empCode' => $employeeCode
-			));
-			return $st->fetchAll();
-		}
+		$st = $this->db->prepare("SELECT * FROM employee_list WHERE employeeCode=:empCode");
+		$st->execute(array(
+			':empCode' => $employeeCode
+		));
+		return $st->fetchAll();
+	}
 		public function signup(){
 			$st = $this->db->prepare("");
 			$st->execute(array(
