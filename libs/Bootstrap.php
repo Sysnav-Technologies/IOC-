@@ -37,8 +37,8 @@
 							$controller->$method($url[2]);
 						}
 						else{
-							require 'controllers/error.php';
-							$controller = new ErrorController();
+							require_once 'controllers/error.php';
+							$controller = new IOC_ErrorController();
 							$controller->index();
 							return;
 						}
@@ -48,8 +48,8 @@
 							$controller->$method();
 						}
 						else{
-							require 'controllers/error.php';
-							$controller = new ErrorController();
+							require_once 'controllers/error.php';
+							$controller = new IOC_ErrorController();
 							$controller->index();
 							return;
 						}	
@@ -60,8 +60,8 @@
 				}	
 			}
 			else{
-				require 'controllers/error.php';
-				$controller = new ErrorController();
+				require_once 'controllers/error.php';
+				$controller = new IOC_ErrorController();
 				$controller->index();
 				return;
 			}
