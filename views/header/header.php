@@ -90,8 +90,8 @@ if (isset($_SESSION['loggedIn'])) {
                 <ul class="nav navbar-nav navbar-right">
                     <!-- <li id="dashboard-li"><a href="index/Dashboard" id="dashboard">Dashboard</a></li>
                     -->
-                    <li id="profile"><a href="profile">Profile</a></li>
-                    <li><a href="index/logout">Logout</a></li>
+                    <li id="profile"><a href="<?php echo URL ?>profile">Profile</a></li>
+                    <li><a href="<?php echo URL ?>index/logout">Logout</a></li>
                     <!--    <li class="dropdown">
                             <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                             <ul class="dropdown-menu">

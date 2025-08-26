@@ -3,9 +3,6 @@
 .env.local
 .env.production
 
-# Server configuration (let server handle)
-.htaccess
-
 # Database configuration
 # config/database.php (only ignore if it contains sensitive data)
 
