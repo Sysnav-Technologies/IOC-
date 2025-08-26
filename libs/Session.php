@@ -1,8 +1,8 @@
 <?php 
 	class Session{
 		public static function init(){
-			// Check if session is already started
-			if (session_status() === PHP_SESSION_NONE) {
+			// Check if session is already started and headers not sent
+			if (session_status() === PHP_SESSION_NONE && !headers_sent()) {
 				session_start();
 			}
 		}

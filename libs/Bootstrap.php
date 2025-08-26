@@ -6,7 +6,7 @@
 		function __construct(){
 			// Initialize Currency Helper
 			CurrencyHelper::init();
-			$url = isset($_GET['url']) ? $_GET['url'] : null;
+			$url = isset($_GET['url']) ? $_GET['url'] : '';
 			$url = explode('/', $url);
 			
 			//if empty redirect to index
@@ -38,7 +38,7 @@
 						}
 						else{
 							require 'controllers/error.php';
-							$controller = new Error();
+							$controller = new ErrorController();
 							$controller->index();
 							return;
 						}
@@ -49,7 +49,7 @@
 						}
 						else{
 							require 'controllers/error.php';
-							$controller = new Error();
+							$controller = new ErrorController();
 							$controller->index();
 							return;
 						}	
@@ -61,7 +61,7 @@
 			}
 			else{
 				require 'controllers/error.php';
-				$controller = new Error();
+				$controller = new ErrorController();
 				$controller->index();
 				return;
 			}
