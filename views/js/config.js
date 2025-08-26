@@ -6,8 +6,11 @@ window.IOC_Config = {
         var host = window.location.host;
         var pathname = window.location.pathname;
         
-        if (host === 'localhost' || host === '127.0.0.1' || host.includes(':')) {
-            // Local environment - include /IOC/ in path
+        if (host === 'localhost:8000') {
+            // PHP built-in server - use root
+            return protocol + '//' + host + '/';
+        } else if (host === 'localhost' || host === '127.0.0.1' || host.includes(':')) {
+            // XAMPP local environment - include /IOC/ in path
             return protocol + '//' + host + '/IOC/';
         } else {
             // Production environment - auto-detect from current path

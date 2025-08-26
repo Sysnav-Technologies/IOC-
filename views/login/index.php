@@ -55,7 +55,50 @@
    <div class="box">
 
       <div class="title">LOGIN</div>
+      
+      <?php 
+      // Display error messages if any
+      if(isset($_GET['error'])): 
+          $errorMsg = '';
+          switch($_GET['error']) {
+              case 'invalid':
+                  $errorMsg = 'Invalid username or password';
+                  break;
+              case 'empty':
+                  $errorMsg = 'Please enter both username and password';
+                  break;
+              case 'missing':
+                  $errorMsg = 'Missing login data';
+                  break;
+              case 'connection':
+                  $errorMsg = 'Database connection failed';
+                  break;
+              case 'table':
+                  $errorMsg = 'Database table not found';
+                  break;
+              case 'database':
+                  $errorMsg = 'Database error occurred';
+                  if(isset($_GET['msg'])) {
+                      $errorMsg .= ': ' . htmlspecialchars($_GET['msg']);
+                  }
+                  break;
+              case 'exception':
+                  $errorMsg = 'System error occurred';
+                  if(isset($_GET['msg'])) {
+                      $errorMsg .= ': ' . htmlspecialchars($_GET['msg']);
+                  }
+                  break;
+              default:
+                  $errorMsg = 'Login error occurred';
+          }
+      ?>
+      <div style="color: red; text-align: center; margin-bottom: 15px; padding: 10px; background: #ffebee; border-radius: 4px;">
+          <?php echo htmlspecialchars($errorMsg); ?>
+      </div>
+      <?php endif; ?>
+      
       <form action="<?php echo URL ?>login/checkin" method="post">
+      <!-- Debug: Current URL base = <?php echo URL ?> -->
       <div class="input">
          <label for="name">Username</label>
          <input type="text" name="username" id="name">

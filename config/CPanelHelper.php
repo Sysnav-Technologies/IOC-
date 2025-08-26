@@ -38,12 +38,25 @@ class CPanelHelper {
     public static function getBaseURL() {
         $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
         
-        // Check if we're on localhost (development)
-        if ($_SERVER['HTTP_HOST'] === 'localhost' || 
-            $_SERVER['HTTP_HOST'] === '127.0.0.1' || 
-            strpos($_SERVER['HTTP_HOST'], ':') !== false) {
-            // Development environment - include /IOC/
-            return $protocol . '://' . $_SERVER['HTTP_HOST'] . '/IOC/';
+        // Default fallback for command line
+        if (isset($_SERVER['HTTP_HOST']) && !empty($_SERVER['HTTP_HOST'])) {
+            $host = $_SERVER['HTTP_HOST'];
+        } else {
+            $host = 'localhost:8000'; // Default for CLI/testing
+        }
+        
+        // Check if we're on localhost development server
+        if ($host === 'localhost:8000') {
+            // PHP built-in server - use root
+            return $protocol . '://' . $host . '/';
+        }
+        
+        // Check if we're on localhost (XAMPP)
+        if ($host === 'localhost' || 
+            $host === '127.0.0.1' || 
+            strpos($host, ':') !== false) {
+            // XAMPP development environment - include /IOC/
+            return $protocol . '://' . $host . '/IOC/';
         }
         
         // Production cPanel environment - auto-detect path

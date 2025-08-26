@@ -25,9 +25,12 @@
 				return;
 			} 
 			$file = __DIR__ . '/../controllers/'. $url[0] .'.php';
+			
 			if(file_exists($file)){
 				require $file;
-				$controller = new $url[0]();
+				// Handle case sensitivity - capitalize first letter for class name
+				$className = ucfirst($url[0]);
+				$controller = new $className();
 				
 				// Ensure $url[1] is a string, not an array
 				if(isset($url[1]) && !is_array($url[1]) && $url[1] != ""){

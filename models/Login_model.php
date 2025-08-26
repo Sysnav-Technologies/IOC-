@@ -3,33 +3,43 @@
 		function __construct(){
 			parent::__construct();
 		}
-		public function login($username,$password){
-			$st = $this->db->prepare("SELECT * FROM employee_list WHERE userName=:username AND userPassword=:password");
-			$st->execute(array(
-				':username' => $username,
-				':password' => $password
-			));
+		
+	public function login($username,$password){
+		try {
+			$st = $this->db->prepare("SELECT * FROM employee_list WHERE userName=? AND userPassword=?");
+			$st->execute([$username, $password]);
 			$data = $st->fetchAll();
-			if(count($data) ==1){
+			
+			if(count($data) == 1){
 				Session::init();
 				$_SESSION['loggedIn'] = $username;
+				$_SESSION['user_name'] = $data[0]['userName']; // Store user name for display
+				$_SESSION['employeeCode'] = $data[0]['employeeCode']; // Store employee code
+				
 				// Clean any output buffer before redirect
 				if (ob_get_level()) {
 					ob_clean();
 				}
-				header('location:' . URL );
+				header('location: ' . URL);
 				exit;
-			}
-			else{
-				// Clean any output buffer before redirect
+			} else {
+				// Login failed - redirect with error
 				if (ob_get_level()) {
 					ob_clean();
 				}
-				header('location:' . URL . 'login');
+				header('location: ' . URL . 'login?error=invalid');
 				exit;
 			}
+		} catch(PDOException $e) {
+			// Database error - redirect with error
+			if (ob_get_level()) {
+				ob_clean();
+			}
+			header('location: ' . URL . 'login?error=database&msg=' . urlencode($e->getMessage()));
+			exit;
 		}
-		public function loadProfileDetails($employeeCode){
+	}
+	public function loadProfileDetails($employeeCode){
 			$st = $this->db->prepare("SELECT * FROM employee_list WHERE employeeCode=:empCode");
 			$st->execute(array(
 				':empCode' => $employeeCode

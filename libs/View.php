@@ -4,14 +4,15 @@
 			
 		}
 		public function render($name,$arg = false){
+			$viewsPath = __DIR__ . '/../views/';
 			if($arg == false){
-				require 'views/'. $name. '.php';
-				require_once 'views/footer/footer.php';
+				require $viewsPath . $name. '.php';
+				require_once $viewsPath . 'footer/footer.php';
 			}
 			else{
-				require 'views/header/header.php';
-				require 'views/'. $name. '.php';
-				require 'views/footer/footer.php';
+				require $viewsPath . 'header/header.php';
+				require $viewsPath . $name. '.php';
+				require $viewsPath . 'footer/footer.php';
 			}
 		}
 	}
