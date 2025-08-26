@@ -1,18 +1,17 @@
 <?php 
 	// Load configuration first
-	require 'config/Config.php';
+	require __DIR__ . '/config/Config.php';
 	Config::loadEnv();
 	
 	//Libraries
-	require 'libs/Bootstrap.php';
-	require 'libs/Controller.php';
-	require 'libs/Model.php';
-	require 'libs/View.php';
-	//require 'libs/Database.php';
-	require 'libs/Session.php';	
+	require __DIR__ . '/libs/Bootstrap.php';
+	require __DIR__ . '/libs/Controller.php';
+	require __DIR__ . '/libs/Model.php';
+	require __DIR__ . '/libs/View.php';
+	require __DIR__ . '/libs/Session.php';	
 	//configuration files
-	require 'config/paths.php';
-	require 'libs/Database.php';
+	require __DIR__ . '/config/paths.php';
+	require __DIR__ . '/config/Database.php';
 	
 	$app  = new Bootstrap();
 ?>
