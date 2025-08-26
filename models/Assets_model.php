@@ -90,20 +90,32 @@ class Assets_model extends Model{
 
           public function  sendemail($email,$user,$subject,$body)
         {
+              // Load environment variables
+              $envFile = __DIR__ . '/../.env';
+              if (file_exists($envFile)) {
+                  $lines = file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+                  foreach ($lines as $line) {
+                      if (strpos($line, '#') === 0) continue; // Skip comments
+                      if (strpos($line, '=') !== false) {
+                          list($key, $value) = explode('=', $line, 2);
+                          $_ENV[trim($key)] = trim($value);
+                      }
+                  }
+              }
               
                require_once 'libs/email/PHPMailer/PHPMailerAutoload.php';
         $mail = new PHPMailer;
     //$mail->SMTPDebug = 1;                               // Enable verbose debug output
         $mail->isSMTP();                                      // Set mailer to use SMTP
-        $mail->Host = 'ssl://smtp.gmail.com';  // Specify main and backup SMTP servers
+        $mail->Host = isset($_ENV['MAIL_HOST']) ? $_ENV['MAIL_HOST'] : 'ssl://smtp.gmail.com';
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
-        $mail->Username = 'ioc.negambo@gmail.com';                 // SMTP username
-        $mail->Password = 'IocNegambo123';                           // SMTP password
-        $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-        $mail->Port = 465;                                    // TCP port to connect to
+        $mail->Username = isset($_ENV['MAIL_USERNAME']) ? $_ENV['MAIL_USERNAME'] : 'ioc.negambo@gmail.com';
+        $mail->Password = isset($_ENV['MAIL_PASSWORD']) ? $_ENV['MAIL_PASSWORD'] : 'IocNegambo123';
+        $mail->SMTPSecure = isset($_ENV['MAIL_ENCRYPTION']) ? $_ENV['MAIL_ENCRYPTION'] : 'ssl';
+        $mail->Port = isset($_ENV['MAIL_PORT']) ? $_ENV['MAIL_PORT'] : 465;
 
-        $mail->From = 'carwash@gmail.com';
-        $mail->FromName = 'IOC';
+        $mail->From = isset($_ENV['MAIL_FROM_ADDRESS']) ? $_ENV['MAIL_FROM_ADDRESS'] : 'carwash@gmail.com';
+        $mail->FromName = isset($_ENV['MAIL_FROM_NAME']) ? $_ENV['MAIL_FROM_NAME'] : 'IOC';
        $mail->addAddress($email, $user);   // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
         $mail->addReplyTo('ioc.negambo@gmail.com', 'IOC');
@@ -133,13 +145,27 @@ class Assets_model extends Model{
               
              if($confirm == "yes")
              {
-                  // db config
-    $dbhost = "localhost";
-    $dbuser = "root";
-    $dbpass = "";
-    $dbname = "ioc";
-    // db connect
-    $pdo = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
+                  // Load environment variables
+                  $envFile = __DIR__ . '/../.env';
+                  if (file_exists($envFile)) {
+                      $lines = file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+                      foreach ($lines as $line) {
+                          if (strpos($line, '#') === 0) continue; // Skip comments
+                          if (strpos($line, '=') !== false) {
+                              list($key, $value) = explode('=', $line, 2);
+                              $_ENV[trim($key)] = trim($value);
+                          }
+                      }
+                  }
+                  
+                  // Use environment variables for database config
+                  $dbhost = isset($_ENV['DB_HOST']) ? $_ENV['DB_HOST'] : 'localhost';
+                  $dbuser = isset($_ENV['DB_USERNAME']) ? $_ENV['DB_USERNAME'] : 'root';
+                  $dbpass = isset($_ENV['DB_PASSWORD']) ? $_ENV['DB_PASSWORD'] : '';
+                  $dbname = isset($_ENV['DB_NAME']) ? $_ENV['DB_NAME'] : 'ioc';
+                  
+                  // db connect
+                  $pdo = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
     // file header stuff
     $output = "-- PHP MySQL Dump\n--\n";
     $output .= "-- Host: $dbhost\n";
