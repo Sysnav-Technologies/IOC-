@@ -1,7 +1,5 @@
 <?php
 
-include_once '\libs\Database.php';
-
 class Carwash_model extends Model {
 
     function __construct() {
@@ -10,7 +8,7 @@ class Carwash_model extends Model {
 
 //PACKAGE DATA RETREIVING STARTS HERE
     public function selectAllpackages() {
-        $packages = '';
+        $packages = []; // Fixed: Initialize as array
         $sql = $this->db->prepare("SELECT * FROM packages");
         $sql->execute();
 
@@ -62,10 +60,9 @@ class Carwash_model extends Model {
     //PACKAGE DATA RETREIVING ENDS HERE
     //CUSTOMER DATA RETREIVING STARTS HERE
     public function selectAllcustomers() {
-        $customers = '';
+        $customers = []; // Fixed: Initialize as array directly
         $sql = $this->db->prepare("SELECT * FROM regular_customers");
         $sql->execute();
-        $customers = array();
         while ($obj = $sql->fetch(PDO::FETCH_OBJ)) {
             $customers[] = $obj;
         }
@@ -218,7 +215,7 @@ class Carwash_model extends Model {
 
     //PDF REPORTS
     function NonRegHistory($string) {
-        $transactions = '';
+        $transactions = []; // Fixed: Initialize as array
         $sql = $this->db->prepare("SELECT cname,contact,vehicleNo,amount,date,returnedDate FROM car_transactions where date like '$string'");
         $sql->execute();
 
@@ -229,7 +226,7 @@ class Carwash_model extends Model {
     }
 
     function RegHistory($string) {
-        $transactions = '';
+        $transactions = []; // Fixed: Initialize as array
         $sql = $this->db->prepare("select cust_id,vehicleNo,amount,date,returnedDate FROM regular_transactions where date like '$string'");
         $sql->execute();
 
@@ -240,7 +237,7 @@ class Carwash_model extends Model {
     }
 
     function Customers() {
-        $customers = '';
+        $customers = []; // Fixed: Initialize as array
         $sql = $this->db->prepare("select cust_id,name,nic,address,contact,date FROM regular_customers");
         $sql->execute();
 
@@ -256,7 +253,7 @@ class Carwash_model extends Model {
         //$date = date("Y-m-d");  where date like'$date'
         $sql = $this->db->prepare("select t.id, r.name, t.package, t.vehicleNo ,t.date,t.status, r.email , r.contact from regular_customers r, regular_transactions t where r.cust_id=t.cust_id and t.status like 'Not Returned'");
         $sql->execute();
-        $Transactions = '';
+        $Transactions = []; // Fixed: Initialize as array
         while ($obj = $sql->fetch(PDO::FETCH_OBJ)) {
 
             $Transactions[] = $obj;
@@ -331,7 +328,7 @@ class Carwash_model extends Model {
         //$date = date("Y-m-d");  where date like'$date'
         $sql = $this->db->prepare("SELECT * FROM car_transactions where status like 'Not Returned'");
         $sql->execute();
-        $Transactions = '';
+        $Transactions = []; // Fixed: Initialize as array
         while ($obj = $sql->fetch(PDO::FETCH_OBJ)) {
 
             $Transactions[] = $obj;
@@ -351,6 +348,7 @@ class Carwash_model extends Model {
 }
 
 ?>
+
 
 
 

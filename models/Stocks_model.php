@@ -275,7 +275,7 @@
 			));
 		}
         public function retrieveStockReport($kl){
-        	$stocks = '';
+        	$stocks = []; // Fixed: Initialize as array
             $sql = $this->db->prepare("SELECT FuelType,Reading,Quantity,Orderamnt,Date FROM Orders WHERE Date LIKE :kl");
             $sql->execute(array(
             	':kl' => $kl
@@ -287,7 +287,7 @@
             return $stocks;
         }
         public function retrievePumpReport($kl){
-        	$pump = '';
+        	$pump = []; // Fixed: Initialize as array
             $sql = $this->db->prepare("SELECT Date,Reading,PumpNo FROM pumpreadings WHERE Date LIKE :kl");
             $sql->execute(array(
             	':kl' => $kl
@@ -299,7 +299,7 @@
             return $pump;
         }
         public function retrieveLubricantReport(){
-        	$lubricant = '';
+        	$lubricant = []; // Fixed: Initialize as array
             $sql = $this->db->prepare("SELECT Name,Price,Quantity,Supplier FROM Lubricants");
             $sql->execute();
 
@@ -309,7 +309,7 @@
             return $lubricant;
         }
         public function retrieveSupplierReport(){
-        	$supplier = '';
+        	$supplier = []; // Fixed: Initialize as array
             $sql = $this->db->prepare("SELECT name,product,contact FROM Suppliers");
             $sql->execute();
 
@@ -326,7 +326,7 @@
 			return $st->fetchAll();
         }
         public function calcPumpReadingForMonth(){
-        	$avgReading = '';
+        	$avgReading = []; // Fixed: Initialize as array
         	
 			$st = $this->db->prepare("SELECT PumpNo AS No, SUM(Reading) AS Total, Date FROM pumpreadings WHERE Date LIKE :kk GROUP BY PumpNo ");
         	$st->execute(array(
@@ -374,6 +374,7 @@
 
 	}
 ?>
+
 
 
 

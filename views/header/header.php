@@ -102,6 +102,25 @@ if (isset($_SESSION['loggedIn'])) {
                 </ul>
             </div>
             <script>
+                // Safety mechanism to clear any stuck spinners
+                $(document).ready(function() {
+                    // Clear any existing spinners after 5 seconds of inactivity
+                    setTimeout(function() {
+                        if ($('#spinner').children().length > 0) {
+                            $('#spinner').empty();
+                            console.log('Cleared stuck spinner');
+                        }
+                    }, 5000);
+                    
+                    // Global AJAX error handler
+                    $(document).ajaxError(function(event, xhr, settings, thrownError) {
+                        console.log('AJAX Error:', thrownError);
+                        $('#spinner').empty();
+                        if (!$('#loader').html()) {
+                            $('#loader').html('<div class="alert alert-danger">Network error. Please check your connection and try again.</div>');
+                        }
+                    });
+                });
 
                 $(window).ready(function () {
                     var hash = window.location.hash;
@@ -132,24 +151,42 @@ if (isset($_SESSION['loggedIn'])) {
                         $('#spinner').empty();
                         $('#subloader').empty();
                         console.log('YUP ! ' + hashCheck(hash)[0]);
+                        
+                        function handleInitialError() {
+                            $('#spinner').empty();
+                            $('#loader').html('<div class="alert alert-danger">Failed to load initial content. Please refresh the page.</div>');
+                            fadeIN();
+                        }
+                        
                         if (hashCheck(hash)[1]) {
-                            $('#loader').load(buildUrl(hashCheck(hash)[0]), function () {
-                                fadeIN();
-                                //        window.location.hash = "/" + hash;
-                                console.log('Success !');
+                            $('#loader').load(buildUrl(hashCheck(hash)[0]), function (response, status, xhr) {
+                                if (status == "error") {
+                                    handleInitialError();
+                                } else {
+                                    fadeIN();
+                                    //        window.location.hash = "/" + hash;
+                                    console.log('Success !');
+                                }
                             });
-                            $('#subloader').load(buildUrl('stocks/' + hashCheck(hash)[1]), function () {
-                                //console.log('morning_stock !');
-
-                                $('#subloader').hide();
-                                $('#subloader').fadeIn('slow');
+                            $('#subloader').load(buildUrl('stocks/' + hashCheck(hash)[1]), function (response, status, xhr) {
+                                if (status == "error") {
+                                    $('#subloader').html('<div class="alert alert-warning">Failed to load sub-content.</div>');
+                                } else {
+                                    //console.log('morning_stock !');
+                                    $('#subloader').hide();
+                                    $('#subloader').fadeIn('slow');
+                                }
                             });
                         }
                         else {
-                            $('#loader').load(buildUrl(hash), function () {
-                                fadeIN();
-                                window.location.hash = "/" + hash;
-                                console.log('Success !');
+                            $('#loader').load(buildUrl(hash), function (response, status, xhr) {
+                                if (status == "error") {
+                                    handleInitialError();
+                                } else {
+                                    fadeIN();
+                                    window.location.hash = "/" + hash;
+                                    console.log('Success !');
+                                }
                             });
                         }
 
@@ -201,84 +238,136 @@ if (isset($_SESSION['loggedIn'])) {
                     setTimeout(function () {
                         console.log('timeout');
 
-                        $('#spinner').empty();
+                        $('#spinner').empty(); // Clear spinner first
                         window.location.hash = "/" + controller;
+                        
+                        // Add error handling for all AJAX calls
+                        function handleError() {
+                            $('#spinner').empty();
+                            $('#loader').html('<div class="alert alert-danger">Failed to load content. Please try again.</div>');
+                            fadeIN();
+                        }
+                        
                         if (controller == 'stocks') {
                             if (!window.mode) {
-                                $('#loader').load(buildUrl('stocks'), function () {
-                                    $(".cont-card").empty();
-                                    console.log('STOCKSSS');
-                                    fadeIN();
-                                    console.log('Success !');
+                                $('#loader').load(buildUrl('stocks'), function (response, status, xhr) {
+                                    if (status == "error") {
+                                        handleError();
+                                    } else {
+                                        $(".cont-card").empty();
+                                        console.log('STOCKSSS');
+                                        fadeIN();
+                                        console.log('Success !');
+                                    }
                                 });
                             }
                             else if (window.mode == "Dashboard") {
-                                $('#loader').load(buildUrl('stocks/stockDashboard'), function (data) {
-                                    fadeIN();
-                                    console.log(data);
+                                $('#loader').load(buildUrl('stocks/stockDashboard'), function (data, status, xhr) {
+                                    if (status == "error") {
+                                        handleError();
+                                    } else {
+                                        fadeIN();
+                                        console.log(data);
+                                    }
                                 });
                             }
                         }
                         else if (controller == '/') {
-                            $('#loader').load(buildUrl(''), function () {
-                                $(".cont-card").empty();
-                                fadeIN();
-                                console.log('Success index!');
+                            $('#loader').load(buildUrl(''), function (response, status, xhr) {
+                                if (status == "error") {
+                                    handleError();
+                                } else {
+                                    $(".cont-card").empty();
+                                    fadeIN();
+                                    console.log('Success index!');
+                                }
                             });
                         }
                         else if (controller == "clients") {
-                            $('#loader').load(buildUrl('clients'), function () {
-                                fadeIN();
-                                console.log('Success !');
+                            $('#loader').load(buildUrl('clients'), function (response, status, xhr) {
+                                if (status == "error") {
+                                    handleError();
+                                } else {
+                                    fadeIN();
+                                    console.log('Success !');
+                                }
                             });
                         }
                         else if (controller == "assets") {
-                            $('#loader').load(buildUrl('assets'), function () {
-                                $(".cont-card").empty();
-                                fadeIN();
-                                console.log('Success !');
+                            $('#loader').load(buildUrl('assets'), function (response, status, xhr) {
+                                if (status == "error") {
+                                    handleError();
+                                } else {
+                                    $(".cont-card").empty();
+                                    fadeIN();
+                                    console.log('Success !');
+                                }
                             });
                         }
                         else if (controller == "employees") {
-                            $('#loader').load(buildUrl('employees'), function () {
-                                $(".cont-card").empty();
-                                fadeIN();
-                                console.log('Success !');
+                            $('#loader').load(buildUrl('employees'), function (response, status, xhr) {
+                                if (status == "error") {
+                                    handleError();
+                                } else {
+                                    $(".cont-card").empty();
+                                    fadeIN();
+                                    console.log('Success !');
+                                }
                             });
                         }
                         else if (controller == "transport") {
-                            $('#loader').load(buildUrl('transport'), function () {
-                                $(".cont-card").empty();
-                                fadeIN();
-                                console.log('Success !');
+                            $('#loader').load(buildUrl('transport'), function (response, status, xhr) {
+                                if (status == "error") {
+                                    handleError();
+                                } else {
+                                    $(".cont-card").empty();
+                                    fadeIN();
+                                    console.log('Success !');
+                                }
                             });
                         }
                         else if (controller == "carwash") {
-                            $('#loader').load(buildUrl('carwash'), function () {
-                                $(".cont-card").empty();
-                                fadeIN();
-                                console.log('Success !');
+                            $('#loader').load(buildUrl('carwash'), function (response, status, xhr) {
+                                if (status == "error") {
+                                    handleError();
+                                } else {
+                                    $(".cont-card").empty();
+                                    fadeIN();
+                                    console.log('Success !');
+                                }
                             });
                         }
                         else if (controller == "lube_service") {
-                            $('#loader').load(buildUrl('lube_service'), function () {
-                                $(".cont-card").empty();
-                                fadeIN();
-                                console.log('Success !');
+                            $('#loader').load(buildUrl('lube_service'), function (response, status, xhr) {
+                                if (status == "error") {
+                                    handleError();
+                                } else {
+                                    $(".cont-card").empty();
+                                    fadeIN();
+                                    console.log('Success !');
+                                }
                             });
                         }
                         else if (controller == "revenue") {
-                            $('#loader').load(buildUrl('revenue'), function () {
-                                $(".cont-card").empty();
-                                fadeIN();
-                                console.log('Success !');
+                            $('#loader').load(buildUrl('revenue'), function (response, status, xhr) {
+                                if (status == "error") {
+                                    handleError();
+                                } else {
+                                    $(".cont-card").empty();
+                                    fadeIN();
+                                    console.log('Success !');
+                                }
                             });
                         }
                         else {
-                            $('#loader').load(buildUrl('err'), function () {
-                                $(".cont-card").empty();
-                                fadeIN();
-                                console.log('Error !');
+                            $('#loader').load(buildUrl('err'), function (response, status, xhr) {
+                                if (status == "error") {
+                                    handleError();
+                                } else {
+                                    $(".cont-card").empty();
+                                    fadeIN();
+                                    console.log('Error !');
+                                }
                             });
                         }
                     }, 1000);
@@ -291,16 +380,36 @@ if (isset($_SESSION['loggedIn'])) {
                 //    e.preventDefault(); 
                 // });
                 function fadeIN() {
+                    $('#spinner').empty(); // Clear spinner first
                     $('#loader').hide();
                     $('#loader').fadeIn('slow');
                 }
+                
+                // Helper functions to control spinner
+                function showSpinner() {
+                    $('#spinner').load(buildUrl('views/css/header/spinkit.html'));
+                }
+                
+                function hideSpinner() {
+                    $('#spinner').empty();
+                }
+                
+                // Make functions globally available
+                window.showSpinner = showSpinner;
+                window.hideSpinner = hideSpinner;
                 $("#profile").click(function (e) {
                     e.preventDefault();
                     $("#loader").empty();
-                    $('#subloader').load(buildUrl('profile'), function () {
-                        $(".cont-card").empty();
-                        fadeIN();
-                        console.log('Success !');
+                    $('#spinner').load(buildUrl('views/css/header/spinkit.html'));
+                    $('#subloader').load(buildUrl('profile'), function (response, status, xhr) {
+                        if (status == "error") {
+                            $('#spinner').empty();
+                            $('#subloader').html('<div class="alert alert-danger">Failed to load profile. Please try again.</div>');
+                        } else {
+                            $(".cont-card").empty();
+                            fadeIN();
+                            console.log('Success !');
+                        }
                     });
                 });
                 // $('#dashboard').click(function(e){

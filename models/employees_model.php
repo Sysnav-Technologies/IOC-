@@ -167,7 +167,7 @@ class Employees_model extends Model {
     public function attenReports($year,$month){
       //  echo $year;
         //echo $month;
-        	$atten = '';
+        	$atten = []; // Fixed: Initialize as array
             $sql = $this->db->prepare("SELECT empCode,shiftCode,atyear,atmonth,atdate,startTime,endTime,pumps FROM attendance WHERE atyear =? AND atmonth =?");
         $sql->bindValue(1, $year);
         $sql->bindValue(2, $month);
@@ -180,7 +180,7 @@ class Employees_model extends Model {
 
         
     public function empReports(){
-        	$emp = '';
+        	$emp = []; // Fixed: Initialize as array
             $sql = $this->db->prepare("SELECT employeeCode,emptype,firstName,lastName,address,nicNumber,mobilePhone,birthDate,hireDate FROM employee_list");
             $sql->execute();
             while ($obj = $sql->fetch(PDO::FETCH_OBJ)) {
@@ -190,7 +190,7 @@ class Employees_model extends Model {
         }
         
     public function shiftReports(){
-        	$shift = '';
+        	$shift = []; // Fixed: Initialize as array
             $sql = $this->db->prepare("SELECT shiftId,shiftName,shiftDuration,shiftRate FROM shiftdb");
             $sql->execute();
             while ($obj = $sql->fetch(PDO::FETCH_OBJ)) {
@@ -210,6 +210,7 @@ class Employees_model extends Model {
 
 ?>
 	
+
 
 
 

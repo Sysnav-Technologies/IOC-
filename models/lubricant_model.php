@@ -135,7 +135,7 @@ class lubricant_model extends Model {
     
     //pdf
     function NonRegHistory() {
-            $transactions = '';
+            $transactions = []; // Fixed: Initialize as array instead of string
             $sql = $this->db->prepare("SELECT cname,contact,vehicleNo,amount,date FROM nonreglu_transactions");
             $sql->execute();
 
@@ -145,7 +145,7 @@ class lubricant_model extends Model {
             return $transactions;
         }
         function RegHistory() {
-            $transactions = '';
+            $transactions = []; // Fixed: Initialize as array instead of string
             $sql = $this->db->prepare("select cust_id,vehicleNo,amount,date FROM regular_lutransactions");
             $sql->execute();
 
@@ -155,7 +155,7 @@ class lubricant_model extends Model {
             return $transactions;
         }
         function Customers() {
-            $customers = '';
+            $customers = []; // Fixed: Initialize as array instead of string
             $sql = $this->db->prepare("select id,name,address,contact,email,date FROM lu_customers");
             $sql->execute();
 

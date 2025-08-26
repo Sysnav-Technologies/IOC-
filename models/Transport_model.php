@@ -129,7 +129,7 @@
             return true;
         }
         public function retrieveEmgReport($kl){
-            $stocks = '';
+            $stocks = []; // Fixed: Initialize as array
             $sql = $this->db->prepare("SELECT * FROM emergencytransport WHERE date LIKE :kl");
             $sql->execute(array(
                 ':kl' => $kl
@@ -141,7 +141,7 @@
             return $stocks;
         }
         public function retrieveLubricantReport(){
-            $stocks = '';
+            $stocks = []; // Fixed: Initialize as array
             $sql = $this->db->prepare("SELECT * FROM lubricanttransport");
             $sql->execute();
 
@@ -151,6 +151,7 @@
             return $stocks;
         }
     }
+
 
 
 

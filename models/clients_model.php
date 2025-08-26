@@ -88,7 +88,7 @@
    
         //client detailed report
         public function clients() {
-            $clients = '';
+            $clients = []; // Fixed: Initialize as array
             $sql = $this->db->prepare("select client_id,client_fname,client_address,client_nic,client_phone FROM clients");
             $sql->execute();
 
@@ -152,7 +152,7 @@
 
                
                 
-        	$tr = '';
+        	$tr = []; // Fixed: Initialize as array
             $sql = $this->db->prepare("SELECT client_name,client_pump_vechicle,pump_date,client_pump_liters,pump_value,trtype FROM client_transactions WHERE  pump_date LIKE ? AND trcusid = ? ");
         $sql->bindValue(1, '%'.$year.'%');
         $sql->bindValue(2, $code);
@@ -167,6 +167,7 @@
         
     }
     
+
 
 
 
