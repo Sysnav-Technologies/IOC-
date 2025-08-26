@@ -73,7 +73,7 @@ $this->view->render('employees/empSub/list_employees',false);
  echo $idemp;
         $model = new Employees_model();
         $searchemp = $model->search_employees($idemp);
-        include '/views/employees/empSub/update_employees.php';
+        include 'views/employees/empSub/update_employees.php';
     
     }
     
@@ -143,7 +143,7 @@ $this->view->render('employees/shift_sub/shift_list',false);
         $id = $_GET['id'];
         $model = new Employees_model();
         $search = $model->search_shift($id);
-        include '/views/employees/shift_sub/shift_updated.php';
+        include 'views/employees/shift_sub/shift_updated.php';
     }
 
     public function shift_update() {
@@ -181,12 +181,12 @@ $this->view->render('employees/shift_sub/shift_list',false);
 //        }
         $model = new Employees_model();
         $getemp1 = $model->list_employee();
-        include '/views/employees/attendance/historyOfAttendance.php';
+        include 'views/employees/attendance/historyOfAttendance.php';
         // $this->view->render('employees/attendance/historyOfAttendance', false);
     }
 
     public function current_attendance() {
-        include '/views/employees/attendance/current_attendance.php';
+        include 'views/employees/attendance/current_attendance.php';
     }
 	
     public function attendance_list() {
@@ -259,7 +259,7 @@ $this->view->render('employees/shift_sub/shift_list',false);
     }
     //report
             public function attenreport(){
-        	  include '/views/employees/report/attenReport.php';
+        	  include 'views/employees/report/attenReport.php';
         } 
                 public function displayAttenReport(){
         	$this->view->render('employees/report/attendanceDisplay',false);

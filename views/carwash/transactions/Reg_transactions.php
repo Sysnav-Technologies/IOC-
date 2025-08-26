@@ -121,7 +121,7 @@
 
             $('#subloader2').hide();
             $('#subloader2').fadeIn('fast');
-        }));
+        });
     });
 </script>
 

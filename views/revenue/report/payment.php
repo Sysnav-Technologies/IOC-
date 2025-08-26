@@ -1,8 +1,8 @@
 
 <?php
 
-require('libs/fpdf/fpdf.php');
-$pdf = new FPDF();
+require_once '../../../libs/SafeFPDF.php';
+$pdf = new SafeFPDF();
 
 $pdf->AddPage();
 
@@ -102,6 +102,7 @@ $pdf->Output();
 }*/
 
 ?>
+
 
 
 

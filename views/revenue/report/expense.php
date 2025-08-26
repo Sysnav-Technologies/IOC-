@@ -1,8 +1,8 @@
 
 <?php
 
-require('libs/fpdf/fpdf.php');
-$pdf = new FPDF();
+require_once 'libs/SafeFPDF.php'; // Fixed: Use correct relative path
+$pdf = new SafeFPDF();
 
 $pdf->AddPage();
 
@@ -148,6 +148,7 @@ foreach ($grandTotal as $row) {
 
 $pdf->Output();
 ?>
+
 
 
 

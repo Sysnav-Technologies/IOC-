@@ -189,7 +189,7 @@ class clients extends Controller {
     }
  //transaction report
                 public function tranReport(){
-        	  include '/views/clients/report/transactionReport.php';
+        	  include 'views/clients/report/transactionReport.php';
         } 
                 public function displayTrReport(){
         	$this->view->render('clients/report/transactionDisplay',false);

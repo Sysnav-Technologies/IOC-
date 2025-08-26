@@ -208,7 +208,7 @@ class Assets extends Controller
         
         
                             public function supplierReport(){
-        	  include '/views/assets/report/supreport.php';
+        	  include 'views/assets/report/supreport.php';
         }
         
                 public function displayAssetsReport(){
