@@ -11,10 +11,31 @@
 			file_put_contents($logFile, "\n[$timestamp] Bootstrap->__construct() called", FILE_APPEND);
 			file_put_contents($logFile, "\n[$timestamp] GET parameters: " . print_r($_GET, true), FILE_APPEND);
 			file_put_contents($logFile, "\n[$timestamp] SERVER REQUEST_URI: " . $_SERVER['REQUEST_URI'], FILE_APPEND);
+			file_put_contents($logFile, "\n[$timestamp] HTTP_HOST: " . (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'not set'), FILE_APPEND);
+			file_put_contents($logFile, "\n[$timestamp] SCRIPT_NAME: " . (isset($_SERVER['SCRIPT_NAME']) ? $_SERVER['SCRIPT_NAME'] : 'not set'), FILE_APPEND);
 			
 			// Initialize Currency Helper
 			CurrencyHelper::init();
 			$url = isset($_GET['url']) ? $_GET['url'] : '';
+			
+			// Fallback for cPanel environments where .htaccess might not work properly
+			if(empty($url) && isset($_SERVER['REQUEST_URI'])) {
+				$requestUri = $_SERVER['REQUEST_URI'];
+				// Remove the script name from the URI if present
+				if(isset($_SERVER['SCRIPT_NAME'])) {
+					$scriptName = dirname($_SERVER['SCRIPT_NAME']);
+					if($scriptName !== '/') {
+						$requestUri = str_replace($scriptName, '', $requestUri);
+					}
+				}
+				// Remove leading slash and query parameters
+				$url = trim($requestUri, '/');
+				$url = explode('?', $url)[0]; // Remove query string
+				file_put_contents($logFile, "\n[$timestamp] Fallback URL extraction from REQUEST_URI: '" . $url . "'", FILE_APPEND);
+			}
+			
+			file_put_contents($logFile, "\n[$timestamp] Raw URL from GET: '" . $url . "'", FILE_APPEND);
+			
 			$url = explode('/', $url);
 			
 			file_put_contents($logFile, "\n[$timestamp] URL array: " . print_r($url, true), FILE_APPEND);
