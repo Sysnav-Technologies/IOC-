@@ -13,7 +13,7 @@
 # ioc.sql
 
 # Dependencies
-/bower_components/
+# /bower_components/ (removed - needed for frontend)
 /node_modules/
 /vendor/
 
