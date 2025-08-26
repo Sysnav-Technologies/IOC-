@@ -309,7 +309,7 @@ class Carwash_model extends Model {
     //new 'e3a975e2', 'ffdd4630'
 // old NexmoMessage('0fd288d7', '4ba994ca');
     public function SendSms($contact) {
-        include ( "/libs/sms/src/NexmoMessage.php" );
+        include ( "libs/sms/src/NexmoMessage.php" );
         $newCon = substr($contact, 1);
 
         // Step 1: Declare new NexmoMessage.
