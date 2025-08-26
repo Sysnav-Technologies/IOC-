@@ -156,6 +156,4 @@ class CurrencyHelper {
         return (float)$amount * $conversionRate;
     }
 }
-
-
-
+?>

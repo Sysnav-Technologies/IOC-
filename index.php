@@ -1,4 +1,7 @@
 <?php 
+	// Start output buffering to prevent header issues
+	ob_start();
+	
 	// Load configuration first
 	require __DIR__ . '/config/Config.php';
 	Config::loadEnv();
@@ -14,6 +17,9 @@
 	require __DIR__ . '/libs/Database.php';
 	
 	$app  = new Bootstrap();
+	
+	// End output buffering and send content
+	ob_end_flush();
 ?>
 
 

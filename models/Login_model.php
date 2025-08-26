@@ -13,10 +13,18 @@
 			if(count($data) ==1){
 				Session::init();
 				$_SESSION['loggedIn'] = $username;
+				// Clean any output buffer before redirect
+				if (ob_get_level()) {
+					ob_clean();
+				}
 				header('location:' . URL );
 				exit;
 			}
 			else{
+				// Clean any output buffer before redirect
+				if (ob_get_level()) {
+					ob_clean();
+				}
 				header('location:' . URL . 'login');
 				exit;
 			}

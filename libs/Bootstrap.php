@@ -65,10 +65,6 @@
 				$controller->index();
 				return;
 			}
-			
 		}
 	}
 ?>
-
-
-
