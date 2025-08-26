@@ -19,25 +19,16 @@
 			if(isset($_POST['username']) && isset($_POST['password'])){
 				$username = $_POST['username'];
 				$password = $_POST['password'];	
+				
 				require 'models/Login_model.php';
 				$model = new Login_model();
-				$empCode = $model->getEmployeeCode($username);
 				
-				// Check if employee code was found
-				if($empCode && is_array($empCode) && count($empCode) > 0){
-					// Extract the actual employeeCode value from the array
-					$employeeCodeRow = $empCode[0];
-					$employeeCode = $employeeCodeRow['employeeCode'];
-					
-					Session::init();
-					$_SESSION['loggedIn'] = $employeeCode;
-					$model->login($username,$password);
-				} else {
-					// Redirect back to login with error (you can enhance this later)
-					header('location:' . URL . 'login');
-				}
+				// Let the model handle the complete login process
+				$model->login($username, $password);
+				exit; // Ensure no further execution after model handles redirect
 			} else {
 				header('location:' . URL . 'login');
+				exit;
 			}
 		}
 		//example for how to use a model

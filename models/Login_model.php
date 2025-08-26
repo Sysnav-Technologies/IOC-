@@ -14,9 +14,11 @@
 				Session::init();
 				$_SESSION['loggedIn'] = $username;
 				header('location:' . URL );
+				exit;
 			}
 			else{
 				header('location:' . URL . 'login');
+				exit;
 			}
 		}
 		public function loadProfileDetails($employeeCode){

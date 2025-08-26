@@ -2,6 +2,10 @@
 <html>
 <head>
 	<title>IOC-Login</title>
+	<?php 
+		// Include paths for standalone login page
+		require_once __DIR__ . '/../../config/paths.php';
+	?>
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
         <!-- Include roboto.css to use the Roboto web font, material.css to include the theme and ripples.css to style the ripple effect -->
     <link href="<?php echo CSS ?>dist/css/roboto.min.css" rel="stylesheet">
@@ -84,8 +88,20 @@
         <script src="<?php echo CSS ?>dist/js/material.min.js"></script>
         <script>
             $(document).ready(function() {
-                // This command is used to initialize some elements and make them work properly
-                $.material.init();
+                // Check if jQuery is loaded
+                if (typeof $ === 'undefined') {
+                    console.error('jQuery not loaded');
+                    return;
+                }
+                
+                // Check if material library is loaded before initializing
+                if (typeof $.material !== 'undefined' && typeof $.material.init === 'function') {
+                    // This command is used to initialize some elements and make them work properly
+                    $.material.init();
+                    console.log('Material design initialized successfully');
+                } else {
+                    console.log('Material design library not loaded properly');
+                }
             });
         </script>
 </body>
