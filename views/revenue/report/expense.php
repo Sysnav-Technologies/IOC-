@@ -1,7 +1,7 @@
 
 <?php
 
-require_once 'libs/SafeFPDF.php'; // Fixed: Use correct relative path
+require_once __DIR__ . '/../../../libs/SafeFPDF.php'; // Fixed: Use correct relative path
 $pdf = new SafeFPDF();
 
 $pdf->AddPage();

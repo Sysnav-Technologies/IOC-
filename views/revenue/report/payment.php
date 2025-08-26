@@ -1,7 +1,7 @@
 
 <?php
 
-require_once '../../../libs/SafeFPDF.php';
+require_once __DIR__ . '/../../../libs/SafeFPDF.php';
 $pdf = new SafeFPDF();
 
 $pdf->AddPage();
