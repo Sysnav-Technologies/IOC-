@@ -14,8 +14,8 @@ if (file_exists(__DIR__ . '/' . $path) && is_file(__DIR__ . '/' . $path)) {
     return false;
 }
 
-// Check for static directories
-if (preg_match('/^(assets|views|bower_components|libs)\//', $path)) {
+// Check for static directories with file extensions
+if (preg_match('/^(assets|views|bower_components|libs)\/.*\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$/', $path)) {
     // Let the built-in server handle static files
     return false;
 }

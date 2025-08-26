@@ -28,7 +28,7 @@
 </div>
 <div id="test"></div>
 
-<script src="<?php echo CSS1; ?>../js/currency-helper.js"></script>
+<script src="<?php echo URL ?>views/js/currency-helper.js"></script>
 <script type="text/javascript">
 
     // function instantSearch(){

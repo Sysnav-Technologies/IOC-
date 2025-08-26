@@ -47,7 +47,7 @@
   <div id="divForGraph"></div>
 
 
-<script type="text/javascript" src="<?php echo CSS?>stocks/js/jqBarGraph.1.1.js"></script>
+<script type="text/javascript" src="<?php echo URL ?>views/stocks/js/jqBarGraph.1.1.js"></script>
 <script type="text/javascript">
     var Petrol = Number(window.petrol);
     //Petrol = Petrol / 2000;

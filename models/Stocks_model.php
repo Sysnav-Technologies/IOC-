@@ -87,14 +87,14 @@
 			return $st->fetchAll();
 		}
 		public function loadOrders($type){
-			$st = $this->db->prepare("SELECT * FROM Orders WHERE FuelType=:fueltype ORDER BY Id DESC");
+			$st = $this->db->prepare("SELECT * FROM orders WHERE FuelType=:fueltype ORDER BY Id DESC");
 			$st->execute(array(
 				':fueltype' => $type
 			));
 			return $st->fetchAll();
 		}
 		public function removeOrder($id){
-			$st = $this->db->prepare("DELETE FROM Orders where Id=:id");
+			$st = $this->db->prepare("DELETE FROM orders where Id=:id");
 			if($st->execute(array(
 				':id' => $id
 			))){
@@ -180,23 +180,23 @@
 			return true;
 		}
 		public function loadLubricants(){
-			$st = $this->db->prepare("SELECT * FROM Lubricants");
+			$st = $this->db->prepare("SELECT * FROM lubricants");
 			$st->execute();
 			return $st->fetchAll();
 		}
 		public function getLubricantSuppliers(){
-			$st = $this->db->prepare("SELECT * FROM Suppliers where product='lubricant'");
+			$st = $this->db->prepare("SELECT * FROM suppliers where product='lubricant'");
 			$st->execute();
 			return $st->fetchAll();
 		}
 		public function removeLubricant($id){
-			$st = $this->db->prepare("DELETE FROM Lubricants where Id=:id");
+			$st = $this->db->prepare("DELETE FROM lubricants where Id=:id");
 			$st->execute(array(
 				':id' => $id
 			));
 		}
 		public function searchLube($name){
-			$st = $this->db->prepare("SELECT * FROM Lubricants WHERE Name LIKE '{$name}%'");
+			$st = $this->db->prepare("SELECT * FROM lubricants WHERE Name LIKE '{$name}%'");
 			$st->execute();
 			return $st->fetchAll();
 		}
@@ -212,7 +212,7 @@
 			return true;
 		}
 		public function checkSupplier($name){
-			$st = $this->db->prepare("SELECT * FROM Suppliers WHERE name=:name");
+			$st = $this->db->prepare("SELECT * FROM suppliers WHERE name=:name");
 			$st->execute(array(
 				':name' => $name
 			));
@@ -221,7 +221,7 @@
 			return $rows;	
 		}
 		public function checkLubricantProduct($name){
-			$st = $this->db->prepare("SELECT * FROM Lubricants WHERE name=:name");
+			$st = $this->db->prepare("SELECT * FROM lubricants WHERE name=:name");
 			$st->execute(array(
 				':name' => $name
 			));
@@ -252,12 +252,12 @@
 			return true;
 		}
 		public function loadLubricantsSuppliers(){
-			$st = $this->db->prepare("SELECT * FROM Suppliers");
+			$st = $this->db->prepare("SELECT * FROM suppliers");
 			$st->execute();
 			return $st->fetchAll();
 		}
 		public function removeLubricantSupplier($id){
-			$st = $this->db->prepare("DELETE FROM Suppliers where Id=:id");
+			$st = $this->db->prepare("DELETE FROM suppliers where Id=:id");
 			$st->execute(array(
 				':id' => $id
 			));
@@ -276,7 +276,7 @@
 		}
         public function retrieveStockReport($kl){
         	$stocks = []; // Fixed: Initialize as array
-            $sql = $this->db->prepare("SELECT FuelType,Reading,Quantity,Orderamnt,Date FROM Orders WHERE Date LIKE :kl");
+            $sql = $this->db->prepare("SELECT FuelType,Reading,Quantity,Orderamnt,Date FROM orders WHERE Date LIKE :kl");
             $sql->execute(array(
             	':kl' => $kl
             ));
@@ -300,7 +300,7 @@
         }
         public function retrieveLubricantReport(){
         	$lubricant = []; // Fixed: Initialize as array
-            $sql = $this->db->prepare("SELECT Name,Price,Quantity,Supplier FROM Lubricants");
+            $sql = $this->db->prepare("SELECT Name,Price,Quantity,Supplier FROM lubricants");
             $sql->execute();
 
             while ($obj = $sql->fetch(PDO::FETCH_OBJ)) {
@@ -310,7 +310,7 @@
         }
         public function retrieveSupplierReport(){
         	$supplier = []; // Fixed: Initialize as array
-            $sql = $this->db->prepare("SELECT name,product,contact FROM Suppliers");
+            $sql = $this->db->prepare("SELECT name,product,contact FROM suppliers");
             $sql->execute();
 
             while ($obj = $sql->fetch(PDO::FETCH_OBJ)) {
@@ -319,7 +319,7 @@
             return $supplier;
         }
         public function getStockGraphComparison(){
-        	$st = $this->db->prepare("SELECT * FROM Orders WHERE Date=:datee");
+        	$st = $this->db->prepare("SELECT * FROM orders WHERE Date=:datee");
 			$st->execute(array(
 				':datee' => date('Y-m-d')
 			));

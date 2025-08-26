@@ -15,7 +15,7 @@ class Assets extends Controller
         
      } 
      public function equipments(){
-         
+         $this->requireAuth();
          $this->view->render('assets/equipments',false);
      }
      public function addequipments()
@@ -45,17 +45,15 @@ class Assets extends Controller
 		}
     public function supplier()
             {
-        
+        $this->requireAuth();
         $this->view->render('assets/supplier',false);
         
      
         }
         public function database_backup()
-            {
-        
-        $this->view->render('assets/database_backup',false);
-        
-     
+        {
+            $this->requireAuth();
+            $this->view->render('assets/database_backup',false);     
         }
         public function add_supplier()
         {
@@ -203,6 +201,7 @@ class Assets extends Controller
 
                 public function report()
         {
+            $this->requireAuth();
             $this->view->render('assets/report/reportIndex',false);
         }
         

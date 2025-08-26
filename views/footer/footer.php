@@ -2,9 +2,9 @@
     <!-- jQuery already loaded in header -->
         <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
 
-        <script src="<?php echo URL ?>assets/js/bootstrap.min.js"></script>        
-        <script src="<?php echo URL ?>assets/js/ripples.min.js"></script>
-        <script src="<?php echo URL ?>assets/js/material.min.js"></script>
+        <script src="<?php echo URL ?>bower_components/bootstrap.min.js"></script>        
+        <script src="<?php echo URL ?>views/dist/js/ripples.min.js"></script>
+        <script src="<?php echo URL ?>views/dist/js/material.min.js"></script>
         <script>
             $(document).ready(function() {
                 // This command is used to initialize some elements and make them work properly

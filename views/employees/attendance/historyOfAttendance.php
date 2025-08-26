@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="/IOC/views/employees/tooltip.css">
+<link rel="stylesheet" type="text/css" href="<?php echo URL ?>views/employees/tooltip.css">
 <style>
 #da0,#da1,#da2,#da3,#da4,#daa{
     width: 5px;
@@ -62,7 +62,7 @@
 </form>
 
 <span id="res"></span>
-<script src="/IOC/views/employees/attendance/alasql.min.js"></script> 
+<script src="<?php echo URL ?>views/employees/attendance/alasql.min.js"></script> 
 <script type="text/javascript">
     $(document).ready(function () {
 
@@ -2439,7 +2439,7 @@ var chart = new CanvasJS.Chart("chartContainer",
 
 
 -->
-<script type="text/javascript" src="/IOC/views/employees/attendance/canvasjs.min.js"></script>
+<script type="text/javascript" src="<?php echo URL ?>views/employees/attendance/canvasjs.min.js"></script>
 
 
 

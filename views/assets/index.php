@@ -15,46 +15,76 @@
 		        
 		    </div>
                       <script type="text/javascript">
+                      // Debug function to check if buildUrl is working
+                      function debugAssetUrl(id) {
+                          var url = buildUrl('assets/' + id);
+                          console.log('Asset URL for ' + id + ': ' + url);
+                          return url;
+                      }
+                      
 		    $('#equipments').click(function(e2){
 	        	e2.preventDefault();
 	        	var id = $(this).attr('id');
+                var url = debugAssetUrl(id);
 
-                $('#subloader').load(buildUrl('assets/' + id), function(){
-                    //console.log('morning_stock !');
- 					$('#subloader').hide();
-                	$('#subloader').fadeIn('fast');
+                $('#subloader').load(url, function(response, status, xhr){
+                    console.log('Load status for ' + id + ': ' + status);
+                    if (status === "error") {
+                        console.log('Error loading ' + id + ': ' + xhr.status + " " + xhr.statusText);
+                        $('#subloader').html('<div class="alert alert-danger">Error loading ' + id + ': ' + xhr.status + " " + xhr.statusText + '</div>');
+                    } else {
+                        $('#subloader').hide();
+                        $('#subloader').fadeIn('fast');
+                    }
                 });
 	        });
                  $('#supplier').click(function(e2){
 	        	e2.preventDefault();
 	        	var id = $(this).attr('id');
+                var url = debugAssetUrl(id);
 
-                $('#subloader').load(buildUrl('assets/' + id), function(){
-                    //console.log('morning_stock !');
- 					$('#subloader').hide();
-                	$('#subloader').fadeIn('fast');
+                $('#subloader').load(url, function(response, status, xhr){
+                    console.log('Load status for ' + id + ': ' + status);
+                    if (status === "error") {
+                        console.log('Error loading ' + id + ': ' + xhr.status + " " + xhr.statusText);
+                        $('#subloader').html('<div class="alert alert-danger">Error loading ' + id + ': ' + xhr.status + " " + xhr.statusText + '</div>');
+                    } else {
+                        $('#subloader').hide();
+                        $('#subloader').fadeIn('fast');
+                    }
                 }); });
             
             
                  $('#report').click(function(e2){
 	        	e2.preventDefault();
 	        	var id = $(this).attr('id');
+                var url = debugAssetUrl(id);
 
-                $('#subloader').load(buildUrl('assets/' + id), function(){
-                    //console.log('morning_stock !');
- 					$('#subloader').hide();
-                	$('#subloader').fadeIn('fast');
-                
-	        });
+                $('#subloader').load(url, function(response, status, xhr){
+                    console.log('Load status for ' + id + ': ' + status);
+                    if (status === "error") {
+                        console.log('Error loading ' + id + ': ' + xhr.status + " " + xhr.statusText);
+                        $('#subloader').html('<div class="alert alert-danger">Error loading ' + id + ': ' + xhr.status + " " + xhr.statusText + '</div>');
+                    } else {
+                        $('#subloader').hide();
+                        $('#subloader').fadeIn('fast');
+                    }
+                });
 	        });
                      $('#database_backup').click(function(e2){
 	        	e2.preventDefault();
 	        	var id = $(this).attr('id');
+                var url = debugAssetUrl(id);
 
-                $('#subloader').load(buildUrl('assets/' + id), function(){
-                    //console.log('morning_stock !');
- 					$('#subloader').hide();
-                	$('#subloader').fadeIn('fast');
+                $('#subloader').load(url, function(response, status, xhr){
+                    console.log('Load status for ' + id + ': ' + status);
+                    if (status === "error") {
+                        console.log('Error loading ' + id + ': ' + xhr.status + " " + xhr.statusText);
+                        $('#subloader').html('<div class="alert alert-danger">Error loading ' + id + ': ' + xhr.status + " " + xhr.statusText + '</div>');
+                    } else {
+                        $('#subloader').hide();
+                        $('#subloader').fadeIn('fast');
+                    }
                 });
 	        });
                 

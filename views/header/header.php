@@ -14,13 +14,13 @@ if (isset($_SESSION['loggedIn'])) {
     <head>
         <title>IOC | Fuel Station management</title>
         <!-- Bootstrap CSS -->
-        <link href="<?php echo URL ?>assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo URL ?>views/css/bootstrap.min.css" rel="stylesheet">
         <!-- Material Design CSS -->
-        <link href="<?php echo URL ?>assets/css/material.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="<?php echo URL ?>assets/css/spinkit.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo URL ?>assets/css/login.css">
+        <link href="<?php echo URL ?>views/dist/css/material.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="<?php echo URL ?>views/css/header/spinkit.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo URL ?>views/css/login.css">
         <link rel="icon" type="image/png" sizes="16x16" href="<?php echo URL ?>views/header/favicon/favicon-16x16.png">
-        <link rel="stylesheet" type="text/css" href="<?php echo URL ?>assets/css/stocks.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo URL ?>views/css/stocks/stocks.css">
 
         <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
         <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
@@ -30,7 +30,7 @@ if (isset($_SESSION['loggedIn'])) {
         <!-- CSS for pump status  -->
         <link rel="stylesheet" type="text/css" href="<?php echo URL ?>views/stocks/pump/css/statuses.css">
         <!-- jQuery -->
-        <script type="text/javascript" src="<?php echo URL ?>assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="<?php echo URL ?>bower_components/jquery/dist/jquery.min.js"></script>
         <!-- IOC Configuration -->
         <script type="text/javascript" src="<?php echo URL ?>views/js/config.js"></script>
         <link rel="stylesheet" type="text/css" href="<?php echo URL ?>views/css/stocks/graph.css">
@@ -45,8 +45,8 @@ if (isset($_SESSION['loggedIn'])) {
         <!-- ICONS for floating action -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/1.5.2/css/ionicons.css">
         <!-- SweetAlert -->
-        <script type="text/javascript" src="<?php echo URL ?>assets/js/sweetalert.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="<?php echo URL ?>assets/css/sweetalert.css">
+        <script type="text/javascript" src="<?php echo URL ?>bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="<?php echo URL ?>bower_components/sweetalert/dist/sweetalert.css">
         
         <!-- Currency Helper JS -->
         <script src="<?php echo URL ?>views/js/currency-helper.js"></script>

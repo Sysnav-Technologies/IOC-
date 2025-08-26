@@ -6,11 +6,11 @@
 		// Include paths for standalone login page
 		require_once __DIR__ . '/../../config/paths.php';
 	?>
-	<link href="<?php echo URL ?>assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="<?php echo URL ?>views/css/bootstrap.min.css" rel="stylesheet">
         <!-- Material Design CSS -->
-    <link href="<?php echo URL ?>assets/css/material.min.css" rel="stylesheet">
+    <link href="<?php echo URL ?>views/dist/css/material.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="<?php echo URL ?>assets/css/login.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo URL ?>views/css/login.css">
     <link rel="stylesheet" type="text/css" href="<?php echo URL ?>views/login/css/index.css">
 </head>
 <body>
@@ -122,11 +122,11 @@
    
 
 </div>
-	<script src="<?php echo URL ?>assets/js/jquery.min.js"></script>
-        <script src="<?php echo URL ?>assets/js/bootstrap.min.js"></script>
+	<script src="<?php echo URL ?>bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="<?php echo URL ?>bower_components/bootstrap.min.js"></script>
 
-        <script src="<?php echo URL ?>assets/js/ripples.min.js"></script>
-        <script src="<?php echo URL ?>assets/js/material.min.js"></script>
+        <script src="<?php echo URL ?>views/dist/js/ripples.min.js"></script>
+        <script src="<?php echo URL ?>views/dist/js/material.min.js"></script>
         <script>
             $(document).ready(function() {
                 // Check if jQuery is loaded

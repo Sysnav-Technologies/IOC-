@@ -9,12 +9,12 @@ class Revenue_model extends Model {
         parent::__construct();
     }
     public function loadLubricantProducts(){
-        $st = $this->db->prepare("SELECT * from Lubricants");
+        $st = $this->db->prepare("SELECT * from lubricants");
         $st->execute();
         return $st->fetchAll();
     }
     public function loadLubricantDataSpec($id){
-        $st = $this->db->prepare("SELECT * FROM Lubricants where Id=:id");
+        $st = $this->db->prepare("SELECT * FROM lubricants where Id=:id");
         $st->execute(array(
             ':id' => $id
         ));
@@ -41,7 +41,7 @@ class Revenue_model extends Model {
         $day = substr($date, 8,8);
         //$day = "29";
         //$day = (integer)$day;
-        $st = $this->db->prepare("SELECT * FROM attendance where atmonth=09 AND atdate=29");
+        $st = $this->db->prepare("SELECT * FROM attendance where atmonth=:atmonth AND atdate=:atdate");
         $st->execute(array(
             ':atmonth' => $month,
             ':atdate' => $day
@@ -49,7 +49,7 @@ class Revenue_model extends Model {
         return $st->fetchAll();
     }
     public function loadFuelExpData($type){
-        $st = $this->db->prepare("SELECT * FROM Orders where Date=:date AND FuelType=:fueltype");
+        $st = $this->db->prepare("SELECT * FROM orders where Date=:date AND FuelType=:fueltype");
         $st->execute(array(
             ':date' => Date('y-m-d'),
             ':fueltype' => $type
