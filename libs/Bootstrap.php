@@ -14,17 +14,17 @@
 				// Check authentication before loading index
 				Session::init();
 				if(!isset($_SESSION['loggedIn'])){
-					require 'controllers/login.php';
+					require __DIR__ . '/../controllers/login.php';
 					$controller = new Login();
 					$controller->index();
 					return;
 				}
-				require 'controllers/index.php';
+				require __DIR__ . '/../controllers/index.php';
 				$controller = new Index();
 				$controller->index();
 				return;
 			} 
-			$file = 'controllers/'. $url[0] .'.php';
+			$file = __DIR__ . '/../controllers/'. $url[0] .'.php';
 			if(file_exists($file)){
 				require $file;
 				$controller = new $url[0]();
@@ -37,7 +37,7 @@
 							$controller->$method($url[2]);
 						}
 						else{
-							require_once 'controllers/error.php';
+							require_once __DIR__ . '/../controllers/error.php';
 							$controller = new IOC_ErrorController();
 							$controller->index();
 							return;
@@ -48,7 +48,7 @@
 							$controller->$method();
 						}
 						else{
-							require_once 'controllers/error.php';
+							require_once __DIR__ . '/../controllers/error.php';
 							$controller = new IOC_ErrorController();
 							$controller->index();
 							return;
@@ -60,7 +60,7 @@
 				}	
 			}
 			else{
-				require_once 'controllers/error.php';
+				require_once __DIR__ . '/../controllers/error.php';
 				$controller = new IOC_ErrorController();
 				$controller->index();
 				return;

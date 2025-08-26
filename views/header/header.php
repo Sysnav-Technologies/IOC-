@@ -1,4 +1,7 @@
 <?php
+// Include paths for URL constants
+require_once __DIR__ . '/../../config/paths.php';
+
 Session::init();
 if (isset($_SESSION['loggedIn'])) {
     
