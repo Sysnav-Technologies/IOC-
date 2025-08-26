@@ -17,44 +17,44 @@ if (isset($_SESSION['loggedIn'])) {
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
         <!-- Include roboto.css to use the Roboto web font, material.css to include the theme and ripples.css to style the ripple effect -->
         <!-- CSS loading animation -->
-        <link href="<?php echo CSS ?>dist/css/roboto.min.css" rel="stylesheet">
-        <link href="<?php echo CSS ?>dist/css/material.min.css" rel="stylesheet">
-        <link href="<?php echo CSS ?>dist/css/ripples.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="<?php echo CSS1 ?>header/spinkit.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo CSS1 ?>login.css">
-        <link rel="icon" type="image/png" sizes="16x16" href="<?php echo CSS ?>header/favicon/favicon-16x16.png">
-        <link rel="stylesheet" type="text/css" href="<?php echo CSS1 ?>stocks/stocks.css">
+        <link href="<?php echo URL ?>serve-static.php?file=views/dist/css/roboto.min.css" rel="stylesheet">
+        <link href="<?php echo URL ?>serve-static.php?file=views/dist/css/material.min.css" rel="stylesheet">
+        <link href="<?php echo URL ?>serve-static.php?file=views/dist/css/ripples.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="<?php echo URL ?>serve-static.php?file=views/css/header/spinkit.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo URL ?>serve-static.php?file=views/css/login.css">
+        <link rel="icon" type="image/png" sizes="16x16" href="<?php echo URL ?>serve-static.php?file=views/header/favicon/favicon-16x16.png">
+        <link rel="stylesheet" type="text/css" href="<?php echo URL ?>serve-static.php?file=views/css/stocks/stocks.css">
 
         <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
         <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 
         <!-- CSS for morning stock for stocks module -->
-        <link rel="stylesheet" type="text/css" href="<?php echo CSS1 ?>stocks/morning_reading.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo URL ?>serve-static.php?file=views/css/stocks/morning_reading.css">
         <!-- CSS for pump status  -->
-        <link rel="stylesheet" type="text/css" href="<?php echo CSS ?>stocks/pump/css/statuses.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo URL ?>serve-static.php?file=views/stocks/pump/css/statuses.css">
         <!-- Jquery  -->
-        <script type="text/javascript" src="<?php echo JQuery ?>"></script>
+        <script type="text/javascript" src="<?php echo URL ?>serve-static.php?file=bower_components/jquery/dist/jquery.min.js"></script>
         <!-- IOC Configuration -->
-        <script type="text/javascript" src="<?php echo CSS1 ?>../js/config.js"></script>
-        <link rel="stylesheet" type="text/css" href="<?php echo CSS1 ?>stocks/graph.css">
+        <script type="text/javascript" src="<?php echo URL ?>serve-static.php?file=views/js/config.js"></script>
+        <link rel="stylesheet" type="text/css" href="<?php echo URL ?>serve-static.php?file=views/css/stocks/graph.css">
 
         <!-- CSS for branches of branches module -->
-        <link rel="stylesheet" type="text/css" href="<?php echo CSS ?>transport/branches/css/index.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo URL ?>serve-static.php?file=views/transport/branches/css/index.css">
 
-        <link rel="stylesheet" type="text/css" href="<?php echo CSS ?>index/css/index.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo CSS ?>profile/css/index.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo URL ?>serve-static.php?file=views/index/css/index.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo URL ?>serve-static.php?file=views/profile/css/index.css">
 
         <!-- Path for foating action button CSS -->
-        <link href="<?php echo FLOATING ?>mfb.css" rel="stylesheet">
+        <link href="<?php echo URL ?>serve-static.php?file=node_modules/mfb/src/mfb.css" rel="stylesheet">
         <!-- Path for foating action button JS -->
-        <script src="<?php echo FLOATING ?>mfb.js"></script>
+        <script src="<?php echo URL ?>serve-static.php?file=node_modules/mfb/src/mfb.js"></script>
         <!-- ICONS for floating action -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/1.5.2/css/ionicons.css">
-        <script src="<?php echo BOWER ?>sweetalert/dist/sweetalert.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="<?php echo BOWER ?>sweetalert/dist/sweetalert.css">
+        <script src="<?php echo URL ?>serve-static.php?file=bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="<?php echo URL ?>serve-static.php?file=bower_components/sweetalert/dist/sweetalert.css">
         
         <!-- Currency Helper JS -->
-        <script src="<?php echo URL ?>views/js/currency-helper.js"></script>
+        <script src="<?php echo URL ?>serve-static.php?file=views/js/currency-helper.js"></script>
         <script>
             // Initialize currency settings from PHP
             $(document).ready(function() {

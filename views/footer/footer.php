@@ -1,10 +1,10 @@
 	<!--<script src="//code.jquery.com/jquery-1.10.2.min.js"></script> -->
-    <script type="text/javascript" src="<?php echo BOWER ?>jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo URL ?>serve-static.php?file=bower_components/jquery/dist/jquery.min.js"></script>
         <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
 
-        <script src="<?php echo BOWER ?>bootstrap.min.js"></script>        
-        <script src="<?php echo BOWER ?>bootstrap-material-design/dist/js/ripples.min.js"></script>
-        <script src="<?php echo BOWER ?>bootstrap-material-design/dist/js/material.min.js"></script>
+        <script src="<?php echo URL ?>serve-static.php?file=bower_components/bootstrap.min.js"></script>        
+        <script src="<?php echo URL ?>serve-static.php?file=bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+        <script src="<?php echo URL ?>serve-static.php?file=bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
         <script>
             $(document).ready(function() {
                 // This command is used to initialize some elements and make them work properly

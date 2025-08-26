@@ -1,17 +1,8 @@
-# Simple .htaccess for cPanel hosting
+# IOC Simple Routing - Static files handled by serve-static.php
 RewriteEngine On
 
-# Block rewriting for static asset directories completely
-RewriteRule ^bower_components/ - [L]
-RewriteRule ^views/css/ - [L]
-RewriteRule ^views/img/ - [L]
-RewriteRule ^views/js/ - [L]
-RewriteRule ^node_modules/ - [L]
-
-# Block rewriting for common file extensions
-RewriteRule \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|map|txt)$ - [L]
-
-# Route everything else to index.php
+# Only route URLs that don't match actual files or directories
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/serve-static\.php
 RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]

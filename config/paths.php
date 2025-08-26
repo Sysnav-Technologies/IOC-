@@ -26,6 +26,22 @@
 			return URL . 'index.php?url=' . $route;
 		}
 	}
+	
+	// Helper function for static file URLs when .htaccess isn't working
+	function getStaticFileURL($filePath) {
+		// If we're having .htaccess issues, use the PHP static file server
+		if (defined('USE_STATIC_SERVER') && USE_STATIC_SERVER) {
+			return URL . 'serve-static.php?file=' . urlencode($filePath);
+		}
+		// Otherwise use direct file access
+		return URL . $filePath;
+	}
+	
+	// Detect if we should use the static file server (can be overridden)
+	if (!defined('USE_STATIC_SERVER')) {
+		// You can set this to true if .htaccess is not working
+		define('USE_STATIC_SERVER', false);
+	}
 ?>
 
 
